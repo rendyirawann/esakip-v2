@@ -1,0 +1,214 @@
+/* =========================================================================
+   eSakip FRONTEND (SKPD) — Global UI Theme
+   Tema TEAL/EMERALD agar berbeda jelas dari backend (biru).
+   Mempercantik sidebar, header, dan komponen konten di SEMUA menu frontend
+   (Dashboard, eSakip/Perencanaan, Dokumen, Portal, dll) sekaligus.
+   Murni tampilan — tidak mengubah markup/fungsi. Dimuat paling akhir lewat
+   AssetBundle sehingga override-nya selalu diterapkan.
+   ========================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+:root {
+  --esk-f-primary: #0d9488;
+  --esk-f-primary-dark: #0f766e;
+  --esk-f-primary-light: #14b8a6;
+  --esk-f-accent: #10b981;
+}
+
+/* -------------------------------------------------------------------------
+   Konten (.pc-content) — komponen umum semua halaman menu
+   ------------------------------------------------------------------------- */
+.pc-content {
+  --esk-ink: #0f172a;
+  --esk-muted: #64748b;
+  --esk-border: #e6efee;
+  --esk-soft: #f4faf9;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Cegah double-wrap container (defensif) */
+.pc-content .pc-container {
+  position: static !important;
+  top: 0 !important;
+  margin-left: 0 !important;
+  min-height: 0 !important;
+}
+.pc-content .pc-content { padding: 0 !important; }
+
+/* Page header & breadcrumb */
+.pc-content .page-header { margin-bottom: 22px; }
+.pc-content .page-header-title h2 { font-weight: 700; color: var(--esk-ink); letter-spacing: -.2px; }
+.pc-content .breadcrumb { background: transparent; padding: 0; margin-bottom: 6px; font-size: 13px; }
+.pc-content .breadcrumb-item a { color: var(--esk-f-primary); text-decoration: none; }
+.pc-content .breadcrumb-item a:hover { text-decoration: underline; }
+.pc-content .breadcrumb-item.active,
+.pc-content .breadcrumb-item[aria-current] { color: var(--esk-muted); }
+.pc-content > h1 { font-size: 24px; font-weight: 700; color: var(--esk-ink); margin: 4px 0 20px; }
+
+/* Cards */
+.pc-content .card {
+  border: 1px solid var(--esk-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -22px rgba(13, 148, 136, .35);
+}
+.pc-content .card-header { background: #fff; border-bottom: 1px solid var(--esk-border); padding: 18px 22px; }
+.pc-content .card-header h5 { font-weight: 700; color: var(--esk-ink); margin: 0; }
+.pc-content .card-header small { color: var(--esk-muted); }
+
+/* Buttons */
+.pc-content .btn { border-radius: 10px; font-weight: 600; transition: transform .12s ease, box-shadow .15s ease, filter .15s ease; }
+.pc-content .btn:hover { transform: translateY(-1px); filter: brightness(1.03); }
+.pc-content .btn-sm { border-radius: 8px; }
+.pc-content .btn-primary {
+  background: linear-gradient(135deg, var(--esk-f-primary-light), var(--esk-f-primary-dark));
+  border: none;
+  box-shadow: 0 8px 18px -8px rgba(13, 148, 136, .6);
+}
+.pc-content .btn-success { background: linear-gradient(135deg, #22c55e, #16a34a); border: none; }
+.pc-content .btn-danger  { background: linear-gradient(135deg, #f87171, #dc2626); border: none; }
+.pc-content .btn-warning { background: linear-gradient(135deg, #fbbf24, #f59e0b); border: none; color: #fff; }
+.pc-content .btn-info    { background: linear-gradient(135deg, #38bdf8, #0ea5e9); border: none; color: #fff; }
+.pc-content .btn-secondary { background: linear-gradient(135deg, #94a3b8, #64748b); border: none; }
+
+/* Tables (custom #table-style-hover + GridView) */
+.pc-content table#table-style-hover { font-size: 13px !important; }
+.pc-content .table { border-color: var(--esk-border); margin-bottom: 0; }
+.pc-content .table > thead > tr > th,
+.pc-content .table thead th {
+  background: var(--esk-soft); color: #3f5c58; font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: .3px; border-bottom: 2px solid var(--esk-border);
+  vertical-align: middle; white-space: nowrap;
+}
+.pc-content .table tbody td { vertical-align: middle; color: #334155; }
+.pc-content .table.table-hover tbody tr:hover { background: #f1faf8; }
+.pc-content .table > :not(caption) > * > * { padding-top: 11px; padding-bottom: 11px; }
+.pc-content .grid-view {
+  background: #fff; border: 1px solid var(--esk-border); border-radius: 16px; padding: 18px;
+  box-shadow: 0 10px 30px -22px rgba(13, 148, 136, .35);
+}
+.pc-content .grid-view .summary { color: var(--esk-muted); font-size: 13px; margin-bottom: 10px; }
+
+/* DataTables controls */
+.pc-content .dataTables_wrapper .dataTables_length select,
+.pc-content .dataTables_wrapper .dataTables_filter input {
+  border: 1px solid var(--esk-border); border-radius: 10px; padding: 6px 12px; outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.pc-content .dataTables_wrapper .dataTables_filter input:focus,
+.pc-content .dataTables_wrapper .dataTables_length select:focus {
+  border-color: var(--esk-f-primary); box-shadow: 0 0 0 3px rgba(13, 148, 136, .14);
+}
+.pc-content .dataTables_wrapper .dataTables_info { color: var(--esk-muted); font-size: 13px; }
+
+/* Forms */
+.pc-content .form-control, .pc-content .form-select {
+  border: 1px solid var(--esk-border); border-radius: 10px; padding: 9px 12px; font-size: 14px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.pc-content .form-control:focus, .pc-content .form-select:focus {
+  border-color: var(--esk-f-primary); box-shadow: 0 0 0 3px rgba(13, 148, 136, .14);
+}
+.pc-content .form-label, .pc-content label.control-label { font-weight: 600; color: #334155; font-size: 13.5px; }
+
+/* Badges, alerts */
+.pc-content .badge { border-radius: 999px; font-weight: 600; padding: .42em .85em; }
+.pc-content .alert { border: none; border-radius: 12px; font-size: 14px; padding: 12px 16px; }
+.pc-content .alert-success { background: rgba(22, 163, 74, .1); color: #15803d; }
+.pc-content .alert-danger  { background: rgba(220, 38, 38, .1); color: #b91c1c; }
+.pc-content .alert-info    { background: rgba(13, 148, 136, .1); color: #0f766e; }
+
+/* Modals */
+.pc-content .modal-content { border: none; border-radius: 18px; box-shadow: 0 30px 60px -20px rgba(2, 6, 23, .4); overflow: hidden; }
+.pc-content .modal-header { border-bottom: 1px solid var(--esk-border); padding: 18px 22px; }
+.pc-content .modal-title { font-weight: 700; color: var(--esk-ink); }
+.pc-content .modal-footer { border-top: 1px solid var(--esk-border); padding: 14px 22px; }
+
+/* Pagination */
+.pc-content .pagination { gap: 4px; flex-wrap: wrap; }
+.pc-content .pagination .page-link {
+  border: 1px solid var(--esk-border); border-radius: 8px !important; color: #3f5c58;
+  margin: 0 1px; min-width: 36px; text-align: center; transition: background .15s, color .15s;
+}
+.pc-content .pagination .page-link:hover { background: #e9f7f5; color: var(--esk-f-primary); }
+.pc-content .pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, var(--esk-f-primary-light), var(--esk-f-primary-dark));
+  border-color: var(--esk-f-primary); color: #fff;
+}
+
+/* =========================================================================
+   SIDEBAR (.pc-sidebar)
+   ========================================================================= */
+.pc-sidebar {
+  --pc-sidebar-active-color: #0d9488;
+  --pc-sidebar-color: #475569;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border-right: 1px solid #e6efee;
+}
+.pc-sidebar .m-header { padding: 16px 22px; border-bottom: 1px solid #e6efee; }
+.pc-sidebar .b-brand h5 { font-weight: 700; color: #0f172a; }
+.pc-sidebar .theme-version.badge {
+  background: linear-gradient(135deg, var(--esk-f-primary-light), var(--esk-f-primary-dark)) !important;
+  color: #fff !important;
+}
+.pc-sidebar .pc-caption label {
+  text-transform: uppercase; letter-spacing: .6px; font-size: 11px; font-weight: 700; color: #94a3b8;
+}
+.pc-sidebar .pc-navbar > .pc-item { margin: 2px 12px; }
+.pc-sidebar .pc-link { border-radius: 12px; font-weight: 500; }
+.pc-sidebar .pc-micon i { color: var(--esk-f-primary); }
+.pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link { background: rgba(13, 148, 136, .07); }
+.pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link::after { opacity: 0; }
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link {
+  background: linear-gradient(135deg, var(--esk-f-primary-light), var(--esk-f-primary-dark));
+  color: #fff !important;
+  box-shadow: 0 8px 18px -8px rgba(13, 148, 136, .55);
+}
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link::after { opacity: 0; }
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-micon i,
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-mtext,
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-arrow i,
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-arrow svg { color: #fff !important; }
+.pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.active > .pc-link,
+.pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.pc-trigger > .pc-link { font-weight: 600; }
+.pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.active > .pc-link::after { background: var(--esk-f-primary); }
+.pc-sidebar .nav-action-card,
+.pc-sidebar .pc-user-card { border-radius: 16px; }
+
+/* =========================================================================
+   HEADER (.pc-header)
+   ========================================================================= */
+.pc-header {
+  background: rgba(255, 255, 255, .88) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e6efee;
+  box-shadow: 0 2px 12px rgba(13, 148, 136, .05);
+}
+.pc-header .pc-head-link { border-radius: 10px; color: #475569; transition: background .15s ease, color .15s ease; }
+.pc-header .pc-head-link:hover,
+.pc-header .pc-head-link[aria-expanded="true"] { background: #e9f7f5; color: var(--esk-f-primary); }
+.pc-header .header-user-profile .user-avtar { border: 2px solid #d6ebe8; border-radius: 50%; }
+.pc-header .dropdown-menu {
+  border: 1px solid #e6efee; border-radius: 14px; box-shadow: 0 18px 40px -18px rgba(15, 23, 42, .35);
+}
+
+/* ============ Tombol toggle sidebar di MOBILE — selalu terlihat ============ */
+@media (max-width: 1024px) {
+  .pc-header .pc-h-item.pc-sidebar-collapse { display: none !important; }
+  .pc-header .pc-h-item.pc-sidebar-popup { display: inline-flex !important; align-items: center; }
+  .pc-header #mobile-collapse {
+    display: inline-flex !important; align-items: center; justify-content: center;
+    width: 42px; height: 42px; border-radius: 10px; background-color: #e9f7f5; padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230d9488' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='4' y1='7' x2='20' y2='7'/%3E%3Cline x1='4' y1='12' x2='20' y2='12'/%3E%3Cline x1='4' y1='17' x2='20' y2='17'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: center; background-size: 22px;
+  }
+  .pc-header #mobile-collapse i { display: none; }
+}
+
+/* Dropdown select: beri ruang panah agar tidak menimpa teks */
+.pc-content .form-select { padding-right: 2.5rem !important; background-position: right 0.85rem center; min-width: 90px; }
+.pc-content select.form-control { padding-right: 2.25rem !important; min-width: 90px; }

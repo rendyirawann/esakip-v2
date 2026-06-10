@@ -1,0 +1,19 @@
+# Mencegah akses langsung ke file .htaccess
+
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Aktifkan Mesin Rewrite
+
+RewriteEngine On
+
+# Jika request adalah untuk file atau direktori yang benar-benar ada, layani secara langsung
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Jika tidak, alihkan request ke index.php
+
+RewriteRule . index.php

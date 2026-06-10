@@ -1,0 +1,1647 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "ESAKIP API Documentation",
+    "version": "1.0.0",
+    "description": "Dokumentasi Swagger API eSakip"
+  },
+  "servers": [
+    {
+      "url": "http://localhost/esakip/doc-api/frontend/web/index.php",
+      "description": "Dokumentasi Swagger API eSakip"
+    }
+  ],
+  "paths": {
+    "/api/periode": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil semua Periode",
+        "parameters": [],
+        "description": "Endpoint untuk mengambil semua periode dari database",
+        "responses": {
+          "200": {
+            "description": "Data user berhasil diambil",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "description": "Waktu respon dalam milidetik",
+                      "example": 124.56
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refperiode_id": {
+                            "type": "integer"
+                          },
+                          "periode": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/skpd": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil semua SKPD",
+        "parameters": [],
+        "description": "Endpoint untuk mengambil semua data SKPD",
+        "responses": {
+          "200": {
+            "description": "Data SKPD berhasil diambil",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "description": "Waktu respon dalam milidetik",
+                      "example": 124.56
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "kode_skpd": {
+                            "type": "string"
+                          },
+                          "nama_skpd": {
+                            "type": "string"
+                          },
+                          "kepala_skpd": {
+                            "type": "string"
+                          },
+                          "nip_kepala": {
+                            "type": "string"
+                          },
+                          "jabatan_kepala": {
+                            "type": "string"
+                          },
+                          "pangkat_kepala": {
+                            "type": "string"
+                          },
+                          "refskpd_unit": {
+                            "type": "string"
+                          },
+                          "skpd_isaktif": {
+                            "type": "string"
+                          },
+                          "refurusan_id": {
+                            "type": "integer"
+                          },
+                          "refbidang_id": {
+                            "type": "integer"
+                          },
+                          "refskpd_keterangan": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-indikator-renstra": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR RENSTRA berdasarkan periode",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data sasaran RENSTRA beserta indikator dan data triwulan berdasarkan refperiode_id",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data RENSTRA berhasil diambil",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "description": "Waktu respon dalam milidetik",
+                      "example": 124.56
+                    },
+                    "refperiode_id": {
+                      "type": "integer",
+                      "description": "Periode yang digunakan"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": {
+                            "type": "integer"
+                          },
+                          "nama_skpd": {
+                            "type": "string"
+                          },
+                          "sasaran": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "refsasaranrenstra_id": {
+                                  "type": "integer"
+                                },
+                                "uraian_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "alasan_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "kriteria_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "formulasi_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "refindikatorsasaranrenstra_id": {
+                                        "type": "integer"
+                                      },
+                                      "uraian_indikatorsasaranrenstra": {
+                                        "type": "string"
+                                      },
+                                      "indikatorsasaranrenstra_satuan": {
+                                        "type": "string"
+                                      },
+                                      "indikatorsasaranrenstra_target": {
+                                        "type": "string"
+                                      },
+                                      "target_rkt": {
+                                        "type": "string"
+                                      },
+                                      "target_rkt_p": {
+                                        "type": "string"
+                                      },
+                                      "target_pk": {
+                                        "type": "string"
+                                      },
+                                      "target_pk_p": {
+                                        "type": "string"
+                                      },
+                                      "realisasi": {
+                                        "type": "string"
+                                      },
+                                      "capaian": {
+                                        "type": "string"
+                                      },
+                                      "analisis": {
+                                        "type": "string"
+                                      },
+                                      "keterangan": {
+                                        "type": "string"
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "reftriwulan_id": {
+                                              "type": "integer"
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-renstra": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR RENSTRA dengan paginasi SKPD",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data sasaran RENSTRA beserta indikator dan data triwulan, dengan opsi filter per SKPD atau paginasi daftar SKPD (5 SKPD per halaman).",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false,
+            "description": "ID Periode. Jika dikosongkan, menggunakan tahun berjalan."
+          },
+          {
+            "in": "query",
+            "name": "filter_refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false,
+            "description": "ID SKPD spesifik untuk filter."
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": { "type": "integer", "default": 1 },
+            "required": false,
+            "description": "Nomor halaman untuk paginasi SKPD."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data RENSTRA berhasil diambil.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "description": "ID Periode RENSTRA yang digunakan untuk data."
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true,
+                      "description": "ID SKPD yang digunakan sebagai filter, null jika tidak ada filter SKPD spesifik."
+                    },
+                    "pagination_skpd": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "currentPage": {
+                          "type": "integer",
+                          "description": "Halaman SKPD saat ini."
+                        },
+                        "skpdPerHalaman": {
+                          "type": "integer",
+                          "description": "Jumlah SKPD per halaman."
+                        },
+                        "totalSkpdKeseluruhan": {
+                          "type": "integer",
+                          "description": "Total SKPD yang memenuhi kriteria (tidak termasuk SKPD ID 1)."
+                        },
+                        "totalSkpdDiHalamanIni": {
+                          "type": "integer",
+                          "description": "Jumlah SKPD yang ditampilkan di halaman ini."
+                        },
+                        "totalPages": {
+                          "type": "integer",
+                          "description": "Total halaman SKPD."
+                        },
+                        "note": {
+                          "type": "string",
+                          "nullable": true,
+                          "description": "Catatan tambahan terkait paginasi atau filter."
+                        }
+                      },
+                      "description": "Informasi paginasi untuk daftar SKPD. Null jika difilter berdasarkan 'filter_refskpd_id'."
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "format": "float",
+                      "description": "Waktu respon dalam milidetik.",
+                      "example": 124.56
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": {
+                            "type": "integer"
+                          },
+                          "nama_skpd": {
+                            "type": "string"
+                          },
+                          "sasaran": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "refsasaranrenstra_id": {
+                                  "type": "integer"
+                                },
+                                "uraian_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "alasan_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "kriteria_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "formulasi_sasaranrenstra": {
+                                  "type": "string"
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "refindikatorsasaranrenstra_id": {
+                                        "type": "integer"
+                                      },
+                                      "uraian_indikatorsasaranrenstra": {
+                                        "type": "string"
+                                      },
+                                      "indikatorsasaranrenstra_satuan": {
+                                        "type": "string"
+                                      },
+                                      "indikatorsasaranrenstra_target": {
+                                        "type": "string"
+                                      },
+                                      "target_rkt": {
+                                        "type": "string"
+                                      },
+                                      "target_rkt_p": {
+                                        "type": "string"
+                                      },
+                                      "target_pk": {
+                                        "type": "string"
+                                      },
+                                      "target_pk_p": {
+                                        "type": "string"
+                                      },
+                                      "realisasi": {
+                                        "type": "string"
+                                      },
+                                      "capaian": {
+                                        "type": "string"
+                                      },
+                                      "analisis": {
+                                        "type": "string"
+                                      },
+                                      "keterangan": {
+                                        "type": "string"
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "reftriwulan_id": {
+                                              "type": "integer"
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string"
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter tidak valid atau periode tidak ditemukan.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean", "example": false },
+                    "message": { "type": "string" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "pagination_skpd": { "type": "object", "nullable": true },
+                    "response_time_ms": { "type": "number" },
+                    "data": { "type": "array", "example": [] }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-indikator-program": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR PROGRAM berdasarkan periode",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data program beserta indikator dan data triwulan berdasarkan refperiode_id\n",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data PROGRAM berhasil diambil",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "description": "Waktu respon dalam milidetik",
+                      "example": 124.56
+                    },
+                    "refperiode_id": {
+                      "type": "integer",
+                      "description": "Periode yang digunakan"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": {
+                            "type": "integer",
+                            "example": 2
+                          },
+                          "nama_skpd": {
+                            "type": "string",
+                            "example": "Dinas Pendidikan"
+                          },
+                          "program": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "uraian_program": {
+                                  "type": "string",
+                                  "example": "Peningkatan Mutu Pendidikan"
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "uraian_indikator": {
+                                        "type": "string",
+                                        "example": "Persentase kelulusan siswa"
+                                      },
+                                      "program_satuan": {
+                                        "type": "string",
+                                        "example": "Persen"
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "reftriwulan_id": {
+                                              "type": "integer",
+                                              "example": 1
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string",
+                                              "example": "90"
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string",
+                                              "example": "90%"
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string",
+                                              "example": "85"
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string",
+                                              "example": "85%"
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string",
+                                              "example": "88"
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string",
+                                              "example": "97.8%"
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string",
+                                              "example": "Membaik dari triwulan sebelumnya"
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string",
+                                              "example": "Peningkatan dikarenakan program pelatihan guru"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-program": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR PROGRAM dengan paginasi SKPD",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data program beserta indikator dan data triwulan, dengan opsi filter per SKPD atau paginasi daftar SKPD (5 SKPD per halaman).",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "filter_refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": { "type": "integer", "default": 1 },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data PROGRAM berhasil diambil.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "description": "ID Periode yang digunakan untuk data."
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true,
+                      "description": "ID SKPD yang digunakan sebagai filter, null jika tidak ada filter SKPD spesifik."
+                    },
+                    "pagination_skpd": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "currentPage": { "type": "integer" },
+                        "skpdPerHalaman": { "type": "integer" },
+                        "totalSkpdKeseluruhan": { "type": "integer" },
+                        "totalSkpdDiHalamanIni": { "type": "integer" },
+                        "totalPages": { "type": "integer" },
+                        "note": { "type": "string", "nullable": true }
+                      },
+                      "description": "Informasi paginasi untuk daftar SKPD."
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "format": "float",
+                      "example": 124.56
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": {
+                            "type": "integer",
+                            "example": 2
+                          },
+                          "nama_skpd": {
+                            "type": "string",
+                            "example": "Dinas Pendidikan"
+                          },
+                          "program": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "uraian_program": {
+                                  "type": "string",
+                                  "example": "Peningkatan Mutu Pendidikan"
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "uraian_indikator": {
+                                        "type": "string",
+                                        "example": "Persentase kelulusan siswa"
+                                      },
+                                      "program_satuan": {
+                                        "type": "string",
+                                        "example": "Persen"
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "reftriwulan_id": {
+                                              "type": "integer",
+                                              "example": 1
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string",
+                                              "example": "90"
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string",
+                                              "example": "90%"
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string",
+                                              "example": "85"
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string",
+                                              "example": "85%"
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string",
+                                              "example": "88"
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string",
+                                              "example": "97.8%"
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string",
+                                              "example": "Membaik dari triwulan sebelumnya"
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string",
+                                              "example": "Peningkatan dikarenakan program pelatihan guru"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter tidak valid atau periode tidak ditemukan.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean", "example": false },
+                    "message": { "type": "string" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "pagination_skpd": { "type": "object", "nullable": true },
+                    "response_time_ms": { "type": "number" },
+                    "data": { "type": "array", "example": [] }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-indikator-kegiatan": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR KEGIATAN berdasarkan periode",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data kegiatan beserta indikator dan data triwulan berdasarkan refperiode_id\n",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data KEGIATAN berhasil diambil",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "description": "Waktu respon dalam milidetik",
+                      "example": 124.56
+                    },
+                    "refperiode_id": {
+                      "type": "integer",
+                      "description": "Periode yang digunakan"
+                    },
+                    "refskpd_id": {
+                      "type": "integer",
+                      "nullable": true,
+                      "description": "ID SKPD yang digunakan untuk filter (jika ada)"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": {
+                            "type": "integer",
+                            "example": 2
+                          },
+                          "nama_skpd": {
+                            "type": "string",
+                            "example": "Dinas Pendidikan"
+                          },
+                          "kegiatan": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "uraian_kegiatan": {
+                                  "type": "string",
+                                  "example": "Peningkatan Mutu Pendidikan"
+                                },
+                                "kegiatan_satuan": {
+                                  "type": "string",
+                                  "example": "Persen"
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "uraian_indikator": {
+                                        "type": "string",
+                                        "example": "Persentase kelulusan siswa"
+                                      },
+                                      "target_rkt": {
+                                        "type": "string",
+                                        "example": "90"
+                                      },
+                                      "target_rkt_p": {
+                                        "type": "string",
+                                        "example": "90%"
+                                      },
+                                      "target_pk": {
+                                        "type": "string",
+                                        "example": "85"
+                                      },
+                                      "target_pk_p": {
+                                        "type": "string",
+                                        "example": "85%"
+                                      },
+                                      "realisasi": {
+                                        "type": "string",
+                                        "example": "88"
+                                      },
+                                      "capaian": {
+                                        "type": "string",
+                                        "example": "97.8%"
+                                      },
+                                      "keterangan": {
+                                        "type": "string",
+                                        "example": "Membaik dari tahun sebelumnya"
+                                      },
+                                      "analisis": {
+                                        "type": "string",
+                                        "example": "Peningkatan dikarenakan pelatihan guru"
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "refindikatorkegiatantriwulan_id": {
+                                              "type": "integer",
+                                              "example": 1
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string",
+                                              "example": "90"
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string",
+                                              "example": "90%"
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string",
+                                              "example": "85"
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string",
+                                              "example": "85%"
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string",
+                                              "example": "88"
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string",
+                                              "example": "97.8%"
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string",
+                                              "example": "Membaik dari triwulan sebelumnya"
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string",
+                                              "example": "Peningkatan dikarenakan program pelatihan guru"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-kegiatan": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR KEGIATAN dengan paginasi SKPD",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data kegiatan beserta indikator dan data triwulan, dengan opsi filter per SKPD atau paginasi daftar SKPD (5 SKPD per halaman).",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "filter_refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": { "type": "integer", "default": 1 },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data KEGIATAN berhasil diambil.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "description": "ID Periode yang digunakan untuk data."
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true,
+                      "description": "ID SKPD yang digunakan sebagai filter, null jika tidak ada filter SKPD spesifik."
+                    },
+                    "pagination_skpd": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "currentPage": { "type": "integer" },
+                        "skpdPerHalaman": { "type": "integer" },
+                        "totalSkpdKeseluruhan": { "type": "integer" },
+                        "totalSkpdDiHalamanIni": { "type": "integer" },
+                        "totalPages": { "type": "integer" },
+                        "note": { "type": "string", "nullable": true }
+                      },
+                      "description": "Informasi paginasi untuk daftar SKPD."
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "format": "float",
+                      "example": 124.56
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": { "type": "integer" },
+                          "nama_skpd": { "type": "string" },
+                          "kegiatan": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "refkegiatan_id": {
+                                  "type": "integer",
+                                  "nullable": true,
+                                  "description": "ID unik kegiatan"
+                                },
+                                "uraian_kegiatan": { "type": "string" },
+                                "kegiatan_satuan": {
+                                  "type": "string",
+                                  "nullable": true
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "refindikatorkegiatan_id": {
+                                        "type": "integer",
+                                        "nullable": true,
+                                        "description": "ID unik indikator kegiatan"
+                                      },
+                                      "uraian_indikator": { "type": "string" },
+                                      "target_rkt": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "target_rkt_p": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "target_pk": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "target_pk_p": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "realisasi": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "capaian": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "keterangan": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "analisis": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "refindikatorkegiatantriwulan_id": {
+                                              "type": "integer",
+                                              "nullable": true
+                                            },
+                                            "reftriwulan_id": {
+                                              "type": "integer",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string",
+                                              "nullable": true
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter tidak valid atau periode tidak ditemukan.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean", "example": false },
+                    "message": { "type": "string" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "pagination_skpd": { "type": "object", "nullable": true },
+                    "response_time_ms": { "type": "number" },
+                    "data": { "type": "array", "example": [] }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-indikator-subkegiatan": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR SUBKEGIATAN berdasarkan periode",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data subkegiatan beserta indikator dan data triwulan berdasarkan refperiode_id.\n",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data SUBKEGIATAN berhasil diambil",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean",
+                      "example": true
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "description": "Waktu respon dalam milidetik",
+                      "example": 120.35
+                    },
+                    "refperiode_id": {
+                      "type": "integer",
+                      "description": "Periode yang digunakan"
+                    },
+                    "refskpd_id": {
+                      "type": "integer",
+                      "nullable": true,
+                      "description": "ID SKPD untuk filter (jika ada)"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": {
+                            "type": "integer",
+                            "example": 2
+                          },
+                          "nama_skpd": {
+                            "type": "string",
+                            "example": "Dinas Pendidikan"
+                          },
+                          "subkegiatan": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "uraian_subkegiatan": {
+                                  "type": "string",
+                                  "example": "Peningkatan Mutu Pendidikan Dasar"
+                                },
+                                "subkegiatan_satuan": {
+                                  "type": "string",
+                                  "example": "Persen"
+                                },
+                                "subkegiatan_target": {
+                                  "type": "string",
+                                  "example": "100"
+                                },
+                                "subkegiatan_anggaran": {
+                                  "type": "string",
+                                  "example": "50000000"
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "uraian_indikator": {
+                                        "type": "string",
+                                        "example": "Persentase kelulusan siswa SD"
+                                      },
+                                      "target_rkt": {
+                                        "type": "string",
+                                        "example": "90"
+                                      },
+                                      "target_rkt_p": {
+                                        "type": "string",
+                                        "example": "90%"
+                                      },
+                                      "target_pk": {
+                                        "type": "string",
+                                        "example": "85"
+                                      },
+                                      "target_pk_p": {
+                                        "type": "string",
+                                        "example": "85%"
+                                      },
+                                      "realisasi": {
+                                        "type": "string",
+                                        "example": "88"
+                                      },
+                                      "capaian": {
+                                        "type": "string",
+                                        "example": "97.8%"
+                                      },
+                                      "keterangan": {
+                                        "type": "string",
+                                        "example": "Membaik dari tahun sebelumnya"
+                                      },
+                                      "analisis": {
+                                        "type": "string",
+                                        "example": "Peningkatan dikarenakan pelatihan guru"
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "refindikatorsubkegiatantriwulan_id": {
+                                              "type": "integer",
+                                              "example": 1
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string",
+                                              "example": "90"
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string",
+                                              "example": "90%"
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string",
+                                              "example": "85"
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string",
+                                              "example": "85%"
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string",
+                                              "example": "88"
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string",
+                                              "example": "97.8%"
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string",
+                                              "example": "Membaik dari triwulan sebelumnya"
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string",
+                                              "example": "Peningkatan dikarenakan program pelatihan guru"
+                                            },
+                                            "penyerapan_anggaran": {
+                                              "type": "string",
+                                              "example": "12000000"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/capkin-subkegiatan": {
+      "get": {
+        "tags": ["GET"],
+        "summary": "Ambil data Tabulasi Capaian Kinerja INDIKATOR SUBKEGIATAN dengan paginasi SKPD",
+        "description": "Endpoint untuk mengambil Tabulasi Capaian Kinerja data subkegiatan beserta indikator dan data triwulan, dengan opsi filter per SKPD atau paginasi daftar SKPD (5 SKPD per halaman).",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "refperiode_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "filter_refskpd_id",
+            "schema": { "type": "integer" },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "schema": { "type": "integer", "default": 1 },
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data SUBKEGIATAN berhasil diambil.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "description": "ID Periode yang digunakan untuk data."
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true,
+                      "description": "ID SKPD yang digunakan sebagai filter, null jika tidak ada filter SKPD spesifik."
+                    },
+                    "pagination_skpd": {
+                      "type": "object",
+                      "nullable": true,
+                      "properties": {
+                        "currentPage": { "type": "integer" },
+                        "skpdPerHalaman": { "type": "integer" },
+                        "totalSkpdKeseluruhan": { "type": "integer" },
+                        "totalSkpdDiHalamanIni": { "type": "integer" },
+                        "totalPages": { "type": "integer" },
+                        "note": { "type": "string", "nullable": true }
+                      },
+                      "description": "Informasi paginasi untuk daftar SKPD."
+                    },
+                    "response_time_ms": {
+                      "type": "number",
+                      "format": "float",
+                      "example": 124.56
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "refskpd_id": { "type": "integer" },
+                          "nama_skpd": { "type": "string" },
+                          "subkegiatan": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "refsubkegiatan_id": {
+                                  "type": "integer",
+                                  "nullable": true,
+                                  "description": "ID unik subkegiatan"
+                                },
+                                "uraian_subkegiatan": { "type": "string" },
+                                "subkegiatan_satuan": {
+                                  "type": "string",
+                                  "nullable": true
+                                },
+                                "subkegiatan_target": {
+                                  "type": "string",
+                                  "nullable": true
+                                },
+                                "subkegiatan_anggaran": {
+                                  "type": "string",
+                                  "nullable": true
+                                },
+                                "indikator": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {
+                                      "refindikatorsubkegiatan_id": {
+                                        "type": "integer",
+                                        "nullable": true,
+                                        "description": "ID unik indikator subkegiatan"
+                                      },
+                                      "uraian_indikator": { "type": "string" },
+                                      "target_rkt": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "target_rkt_p": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "target_pk": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "target_pk_p": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "realisasi": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "capaian": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "keterangan": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "analisis": {
+                                        "type": "string",
+                                        "nullable": true
+                                      },
+                                      "triwulan": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "refindikatorsubkegiatantriwulan_id": {
+                                              "type": "integer",
+                                              "nullable": true
+                                            },
+                                            "reftriwulan_id": {
+                                              "type": "integer",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_rkt": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_rkt_p": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_pk": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_target_pk_p": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_realisasi": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_capaian": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_keterangan": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "triwulan_analisis": {
+                                              "type": "string",
+                                              "nullable": true
+                                            },
+                                            "penyerapan_anggaran": {
+                                              "type": "string",
+                                              "nullable": true
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request - Parameter tidak valid atau periode tidak ditemukan.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": { "type": "boolean", "example": false },
+                    "message": { "type": "string" },
+                    "refperiode_id_aktif": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "filter_refskpd_id_applied": {
+                      "type": "integer",
+                      "nullable": true
+                    },
+                    "pagination_skpd": { "type": "object", "nullable": true },
+                    "response_time_ms": { "type": "number" },
+                    "data": { "type": "array", "example": [] }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+<?php
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+/** @var yii\web\View $this */
+/** @var frontend\models\search\SakipCascadingkegiatanSearch $searchModel */
+/** @var yii\data\ActiveDataProvider $dataProvider */
+
+$this->title = 'Dokrenbang Dokumen Sub Kegiatan';
+$this->params['breadcrumbs'][] = $this->title;
+
+?>
+<div class="pc-container">
+    <div class="pc-content">
+        <!-- [ breadcrumb ] start -->
+        <div class="page-header">
+            <div class="page-block">
+                <div class="row align-items-center">
+                    <div class="col-md-12">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="<?= Url::to(['/site/index-dokrenbang']) ?>">Home</a></li>
+                            <li class="breadcrumb-item" aria-current="page">DOKRENBANG - Dokumen Keluar Sub Kegiatan</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="page-header-title">
+                            <h2 class="mb-0">DOKRENBANG - Dokumen Keluar Sub Kegiatan</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [ breadcrumb ] end -->
+
+
+        <div class="row">
+            <!-- start row -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header" style="background-color: #04A9F5; padding: 8px;">
+                        <h6 style="color: white; margin: 0; cursor: pointer;" id="toggleAll">
+                            <i class="fas fa-pen-fancy"></i> DOKRENBANG - Dokumen Keluar Sub Kegiatan - <?= Html::decode($nama_skpd) ?>
+                        </h6>
+                    </div>
+                </div>
+                <!-- End Card -->
+
+                <!-- Table Start -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Data Dokumen Keluar Sub Kegiatan</h5>
+                        <small>List Data</small>
+                        <br>
+
+
+                    </div>
+                    <div class="card-body">
+                        <?php if (Yii::$app->session->hasFlash('success')) : ?>
+                            <div class="alert alert-success">
+                                <?= Yii::$app->session->getFlash('success') ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if (Yii::$app->session->hasFlash('error')) : ?>
+                            <div class="alert alert-danger">
+                                <?= Yii::$app->session->getFlash('error') ?>
+                            </div>
+                        <?php endif; ?>
+
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <!-- Dropdown filter berdasarkan refperiode_id -->
+                                <?= \yii\helpers\Html::beginForm(['index'], 'get', ['class' => 'form-inline']); ?>
+                                <div class="form-group">
+                                    <?= \yii\helpers\Html::label('Pilih Periode:', 'refperiode_id', ['class' => 'mr-2']); ?>
+                                    <?= \yii\helpers\Html::dropDownList(
+                                        'refperiode_id',
+                                        $selectedPeriodId,
+                                        \yii\helpers\ArrayHelper::map($periodeList, 'refperiode_id', 'periode'), // Mapping periodeList
+                                        [
+                                            'class' => 'form-control',
+                                            'prompt' => 'Semua Periode',
+                                            'onchange' => 'this.form.submit()' // Submit form saat pilihan berubah
+                                        ]
+                                    ); ?>
+                                </div>
+                                <?= \yii\helpers\Html::endForm(); ?>
+                            </div>
+                        </div>
+
+
+
+                        <?php if (empty($cascadingSubkegiatanList)): ?>
+                            <div class="alert alert-warning mt-4">
+                                Data tidak ada untuk periode yang dipilih.
+                            </div>
+                        <?php else: ?>
+                            <div class="dt-responsive table-responsive">
+                                <table id="table-style-hover" class="table table-striped table-hover table-bordered nowrap" style="font-size:xx-small;">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Cascading Sub Kegiatan</th>
+                                            <th>Dokumen</th>
+                                            <th>Download</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($cascadingSubkegiatanList as $index => $subkegiatan): ?>
+                                            <?php if (!empty($subkegiatan->simonaKeluaranmediacascadingsubkegiatan)): ?>
+                                                <tr>
+                                                    <td rowspan="<?= count($subkegiatan->simonaKeluaranmediacascadingsubkegiatan) ?>">
+                                                        <?= $index + 1 ?>
+                                                    </td>
+                                                    <td rowspan="<?= count($subkegiatan->simonaKeluaranmediacascadingsubkegiatan) ?>">
+                                                        <?= Html::encode($subkegiatan->refSUbkegiatan->nama_subkegiatan) ?>
+                                                    </td>
+                                                    <?php foreach ($subkegiatan->simonaKeluaranmediacascadingsubkegiatan as $key => $dokumen): ?>
+                                                        <?php if ($key > 0): ?>
+                                                <tr><?php endif; ?>
+                                                <td>
+                                                    <?= Html::encode($dokumen->nama_file) ?>
+                                                </td>
+                                                <td>
+                                                    <?= Html::a(
+                                                            'Download',
+                                                            ['simona-keluaranmediacascadingsubkegiatan/download', 'refsimonakeluaranmediacascadingsubkegiatan_id' => $dokumen->refsimonakeluaranmediacascadingsubkegiatan_id],
+                                                            ['class' => 'btn btn-success btn-sm', 'target' => '_blank']
+                                                        ) ?>
+                                                </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                            </tr>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <?php endif; ?>
+
+
+                    </div>
+                </div>
+
+                <!-- Table end -->
+            </div>
+            <!-- end row -->
+        </div>
+
+
+        <!-- [ Main Content ] end -->
+    </div>
+</div>

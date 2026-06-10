@@ -1,0 +1,259 @@
+/* =========================================================================
+   eSakip — PORTAL FRONTEND theme (BIRU + Plus Jakarta Sans) + layout baru
+   Dimuat paling akhir di MainPortalAsset → menata portal & sub-halaman
+   (portal-publik-*). Murni tampilan.
+   ========================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body,
+.navbar,
+.btn,
+.card,
+.nav-link,
+.esk-portal {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* ---------- Navbar (biru, seperti sebelumnya tapi dirapikan) ---------- */
+nav.navbar {
+  background: linear-gradient(135deg, #1e6fd9 0%, #0051c4 100%) !important;
+  box-shadow: 0 6px 20px -10px rgba(0, 81, 196, .55) !important;
+}
+nav.navbar .navbar-brand,
+nav.navbar .nav-link { color: #ffffff !important; font-weight: 600; }
+nav.navbar .nav-link { border-radius: 10px; padding-left: 12px; padding-right: 12px; transition: background .15s ease; }
+nav.navbar .nav-link:hover { background: rgba(255, 255, 255, .16); }
+nav.navbar .dropdown-menu { border: none; border-radius: 14px; box-shadow: 0 18px 40px -18px rgba(15, 23, 42, .35); }
+nav.navbar .dropdown-item { color: #0f172a !important; font-weight: 500; }
+nav.navbar .dropdown-item:hover { background: #eaf1ff; color: #0051c4 !important; }
+
+marquee.bg-light { background: #eef4ff !important; border-bottom: 1px solid #dbe6fb; }
+
+/* ============================= STRUKTUR BARU ============================= */
+.esk-portal { color: #0f2a5e; }
+
+/* Hero */
+.esk-portal-hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  padding: 70px 24px 86px;
+  border-radius: 0 0 36px 36px;
+  box-shadow: 0 24px 60px -28px rgba(0, 81, 196, .7);
+  background: radial-gradient(700px 380px at 14% 12%, rgba(81, 196, 248, .55) 0%, transparent 55%),
+              radial-gradient(700px 420px at 90% 100%, rgba(37, 99, 235, .5) 0%, transparent 55%),
+              linear-gradient(135deg, #0051c4 0%, #1e6fd9 55%, #0a3aa0 100%);
+}
+.esk-portal-hero::before,
+.esk-portal-hero::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; }
+.esk-portal-hero::before { width: 280px; height: 280px; right: -90px; top: -90px; background: rgba(255, 255, 255, .08); }
+.esk-portal-hero::after  { width: 200px; height: 200px; left: -60px; bottom: -40px; background: rgba(255, 255, 255, .06); }
+.esk-hero-logo {
+  width: 92px; height: 92px; border-radius: 22px;
+  background: rgba(255, 255, 255, .15); border: 1px solid rgba(255, 255, 255, .28);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 18px; position: relative; z-index: 1;
+}
+.esk-hero-logo img { width: 60px; height: 60px; object-fit: contain; }
+.esk-hero-eyebrow {
+  display: inline-block; font-size: .76rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: #cfe4ff; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .22);
+  padding: 6px 16px; border-radius: 999px; margin-bottom: 16px; position: relative; z-index: 1;
+}
+.esk-portal-hero h1 { font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 800; letter-spacing: -.5px; margin: 0; position: relative; z-index: 1; }
+.esk-portal-hero p { margin: .7rem auto 0; max-width: 640px; font-size: 1.02rem; color: rgba(255, 255, 255, .85); position: relative; z-index: 1; }
+
+/* Section heading */
+.esk-portal-section { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.esk-section-head { text-align: center; margin: 50px 0 26px; }
+.esk-section-head .eyebrow {
+  display: inline-block; font-size: .74rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  color: #0051c4; background: #eaf1ff; border: 1px solid #d6e3fb; padding: 5px 14px; border-radius: 999px; margin-bottom: 10px;
+}
+.esk-section-head h2 { font-weight: 800; color: #0f2a5e; margin: 0; font-size: 1.7rem; }
+.esk-section-head p { color: #5b6b86; margin: .4rem 0 0; }
+
+/* App cards */
+.esk-app-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
+.esk-app-card {
+  background: #fff; border: 1px solid #e6edf8; border-radius: 20px; padding: 32px 26px;
+  text-align: center; display: flex; flex-direction: column; align-items: center;
+  box-shadow: 0 14px 36px -22px rgba(0, 81, 196, .4);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.esk-app-card:hover { transform: translateY(-8px); border-color: rgba(0, 81, 196, .4); box-shadow: 0 26px 50px -22px rgba(0, 81, 196, .5); }
+.esk-app-ic { width: 96px; height: 96px; border-radius: 24px; background: #eef4ff; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.esk-app-ic img { width: 66px; height: 66px; object-fit: contain; }
+.esk-app-card h3 { font-size: 1.15rem; font-weight: 700; color: #0f2a5e; margin: 0 0 8px; }
+.esk-app-card p { color: #5b6b86; font-size: .9rem; margin: 0 0 20px; line-height: 1.5; flex: 1; }
+.esk-app-btn {
+  background: linear-gradient(135deg, #2563eb, #0051c4); color: #fff !important; border: none;
+  padding: .6rem 1.7rem; border-radius: 999px; font-weight: 600; font-size: .9rem; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 7px; box-shadow: 0 10px 22px -8px rgba(0, 81, 196, .6);
+  transition: transform .15s ease, filter .15s ease;
+}
+.esk-app-btn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+/* Link cards */
+.esk-link-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-bottom: 64px; }
+.esk-link-card {
+  display: flex; align-items: center; gap: 16px; background: #fff; border: 1px solid #e6edf8; border-radius: 16px;
+  padding: 18px 20px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.esk-link-card:hover { transform: translateY(-4px); border-color: rgba(0, 81, 196, .35); box-shadow: 0 18px 36px -22px rgba(0, 81, 196, .45); }
+.esk-link-card .ic { width: 54px; height: 54px; border-radius: 14px; background: #eef4ff; display: flex; align-items: center; justify-content: center; flex: 0 0 54px; }
+.esk-link-card .ic img { width: 36px; height: 36px; object-fit: contain; }
+.esk-link-card .t { font-weight: 700; color: #0f2a5e; }
+.esk-link-card .s { font-size: .82rem; color: #5b6b86; }
+.esk-link-card .arr { margin-left: auto; color: #0051c4; font-size: 1.2rem; }
+
+@media (max-width: 575px) { .esk-portal-hero { padding: 52px 18px 66px; } }
+
+/* ---------- Tone umum sub-halaman portal-publik ---------- */
+.btn-primary { background: linear-gradient(135deg, #2563eb, #0051c4) !important; border: none !important; }
+.table thead th { background: #eef4ff; color: #0f2a5e; }
+
+/* ============ Hero split (teks + foto bupati) ============ */
+.esk-portal-hero { text-align: left; }
+.esk-hero-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; gap: 44px; position: relative; z-index: 1; }
+.esk-hero-text { flex: 1 1 56%; }
+.esk-hero-text .esk-hero-eyebrow,
+.esk-hero-text h1 { text-align: left; }
+.esk-hero-text p { margin-left: 0; text-align: left; }
+.esk-hero-media { flex: 0 0 40%; display: flex; justify-content: center; }
+.esk-hero-photo {
+  width: 100%; max-width: 400px; border-radius: 22px; overflow: hidden;
+  border: 4px solid rgba(255, 255, 255, .2); box-shadow: 0 28px 60px -22px rgba(0, 0, 0, .6);
+}
+.esk-hero-photo img { width: 100%; height: 280px; object-fit: cover; display: block; }
+@media (max-width: 860px) {
+  .esk-hero-inner { flex-direction: column; text-align: center; }
+  .esk-hero-text { text-align: center; }
+  .esk-hero-text .esk-hero-eyebrow, .esk-hero-text h1, .esk-hero-text p { text-align: center; }
+  .esk-hero-media { order: -1; width: 100%; }
+}
+
+/* ============ Kartu menu publik (Tabulasi/Perencanaan/Capkin/Evaluasi) ============ */
+.esk-pub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.esk-pub-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  background: #fff; border: 1px solid #e6edf8; border-radius: 18px; padding: 28px 20px;
+  text-decoration: none; box-shadow: 0 12px 30px -22px rgba(0, 81, 196, .4);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.esk-pub-card:hover { transform: translateY(-6px); border-color: rgba(0, 81, 196, .4); box-shadow: 0 22px 44px -22px rgba(0, 81, 196, .5); }
+.esk-pub-ic {
+  width: 64px; height: 64px; border-radius: 18px; margin-bottom: 14px; font-size: 28px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #2563eb, #0051c4); color: #fff;
+}
+.esk-pub-card .t { font-weight: 700; color: #0f2a5e; font-size: 1.02rem; }
+.esk-pub-card .s { font-size: .82rem; color: #5b6b86; margin-top: 4px; }
+
+/* ============ Kartu filter (portal-publik) ============ */
+.esk-filter-card {
+  max-width: 640px; margin: 0 auto 64px; background: #fff; border: 1px solid #e6edf8;
+  border-radius: 20px; overflow: hidden; box-shadow: 0 16px 40px -24px rgba(0, 81, 196, .45);
+}
+.esk-filter-head { background: linear-gradient(135deg, #1e6fd9, #0051c4); color: #fff; padding: 16px 22px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.esk-filter-body { padding: 24px; }
+.esk-filter-body .form-label { font-weight: 600; color: #0f2a5e; margin-bottom: 6px; }
+.esk-filter-body .form-control, .esk-filter-body .form-select { border: 1px solid #e6edf8; border-radius: 10px; padding: 10px 12px; }
+.esk-filter-body .form-control:focus, .esk-filter-body .form-select:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, .14); }
+.esk-filter-btn {
+  background: linear-gradient(135deg, #2563eb, #0051c4) !important; color: #fff !important;
+  border: none !important; border-radius: 10px !important; padding: .75rem !important;
+  font-weight: 600 !important; width: 100%; box-shadow: 0 10px 22px -8px rgba(0, 81, 196, .6);
+}
+.esk-filter-btn:hover { filter: brightness(1.07); }
+
+/* ============ Footer portal ============ */
+.esk-footer {
+  background: linear-gradient(135deg, #0a3aa0 0%, #0051c4 60%, #1e6fd9 100%);
+  color: #dbe7ff; padding: 50px 24px 0; margin-top: 40px;
+}
+.esk-footer-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1.1fr; gap: 36px; }
+.esk-footer h5 { color: #fff; font-weight: 700; font-size: 1.02rem; margin-bottom: 14px; }
+.esk-footer p, .esk-footer li { color: rgba(219, 231, 255, .85); }
+.esk-footer a { color: rgba(219, 231, 255, .85); text-decoration: none; transition: color .15s; }
+.esk-footer a:hover { color: #fff; }
+.esk-footer .brand-logo { width: 64px; margin-bottom: 12px; }
+.esk-footer .socials { display: flex; gap: 10px; margin-top: 14px; }
+.esk-footer .socials a { width: 40px; height: 40px; border-radius: 12px; background: rgba(255, 255, 255, .12); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; transition: all .2s ease; }
+.esk-footer .socials a:hover { background: #fff; color: #0051c4; transform: translateY(-2px); }
+.esk-footer .footer-contact { list-style: none; padding: 0; margin: 0; }
+.esk-footer .footer-contact li { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.esk-footer .footer-contact i { margin-top: 3px; }
+.esk-footer-bottom { max-width: 1140px; margin: 36px auto 0; padding: 18px 0; border-top: 1px solid rgba(255, 255, 255, .15); text-align: center; font-size: .85rem; color: rgba(219, 231, 255, .7); }
+@media (max-width: 768px) { .esk-footer-inner { grid-template-columns: 1fr; gap: 26px; } }
+
+/* ============ Banner Bupati (full width, besar) ============ */
+.esk-bupati-banner { width: 100%; line-height: 0; background: #dbe7ff; }
+.esk-bupati-banner img { width: 100%; height: auto; display: block; }
+#full-slider-wrapper { margin-bottom: 0; }
+
+/* =========================================================================
+   Sub-halaman publik (Tabulasi / Perencanaan / Capkin / Evaluasi Renja)
+   Penataan generik (CSS saja) agar konsisten bertema biru.
+   ========================================================================= */
+/* Kartu menu kecil di atas tiap halaman */
+.menu-icon.card {
+  border: 1px solid #e6edf8 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 26px -20px rgba(0, 81, 196, .4) !important;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.menu-icon.card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -20px rgba(0, 81, 196, .5) !important; }
+.menu-icon.card span { background: #eef4ff !important; color: #0f2a5e !important; font-weight: 700; }
+
+/* Kartu data (bukan kartu menu) */
+main .container .card:not(.menu-icon),
+.esk-portal .card:not(.menu-icon) {
+  border: 1px solid #e6edf8;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px -24px rgba(0, 81, 196, .4);
+}
+.card-header h1, .card-header h2, .card-header h3,
+.card-header h4, .card-header h5, .card-header h6 { color: #fff; margin: 0; }
+.card-header { font-weight: 700; }
+
+/* Heading umum halaman */
+main .container h1, main .container h2, main .container h3,
+main .container h4, main .container h5 { color: #0f2a5e; }
+
+/* Tabel data */
+main .container .table { border-color: #e6edf8; }
+main .container .table thead th {
+  background: #eef4ff; color: #0f2a5e; font-weight: 700;
+  border-bottom: 2px solid #d6e3fb; vertical-align: middle;
+}
+main .container .table tbody td { vertical-align: middle; }
+main .container .table-striped > tbody > tr:nth-of-type(odd) > * { background: #f7faff; }
+main .container .table-hover > tbody > tr:hover > * { background: #eef4ff; }
+main .container .table-responsive { border-radius: 12px; }
+
+/* Form & tombol di sub-halaman */
+main .container .form-control,
+main .container .form-select { border: 1px solid #e6edf8; border-radius: 10px; }
+main .container .form-control:focus,
+main .container .form-select:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, .14); }
+main .container .btn-info { background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important; border: none !important; color: #fff !important; }
+main .container .badge.bg-primary,
+main .container .badge.bg-info { background: linear-gradient(135deg, #2563eb, #0051c4) !important; }
+
+/* ============ Carousel Bootstrap (gambar penuh) ============ */
+.esk-carousel { width: 100%; overflow: hidden; background: #dbe7ff; }
+.esk-carousel .carousel-item img { width: 100%; height: auto; display: block; }
+.esk-carousel .carousel-control-prev, .esk-carousel .carousel-control-next { width: 6%; }
+.esk-carousel .carousel-control-prev-icon,
+.esk-carousel .carousel-control-next-icon { background-color: rgba(0, 81, 196, .6); border-radius: 50%; padding: 16px; background-size: 45%; }
+.esk-carousel .carousel-indicators [data-bs-target] { width: 11px; height: 11px; border-radius: 50%; background-color: #fff; opacity: .55; border: none; }
+.esk-carousel .carousel-indicators .active { opacity: 1; background-color: #2563eb; }
+
+/* Kartu menu publik aktif (halaman yang sedang dibuka) */
+.esk-pub-card.active { border-color: #2563eb; box-shadow: 0 18px 40px -20px rgba(0, 81, 196, .55); background: #f5f9ff; }
+.esk-pub-card.active .esk-pub-ic { box-shadow: 0 8px 18px -6px rgba(0, 81, 196, .6); }

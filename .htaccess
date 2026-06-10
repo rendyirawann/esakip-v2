@@ -1,0 +1,28 @@
+# prevent directory listings
+
+Options -Indexes
+IndexIgnore _/_
+
+# follow symbolic links
+
+Options +FollowSymlinks
+RewriteEngine On
+
+# Abaikan jika folder/file nyata ada
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Abaikan routing jika path mulai dengan 'laravel-swagger'
+
+# Abaikan routing jika path mulai dengan 'laravel-swagger'
+
+RewriteCond %{REQUEST_URI} !^/laravel-swagger
+
+# Admin URL Rewrite
+
+RewriteRule ^admin(/.+)?$ backend/web/$1 [L,PT]
+
+# Frontend URL Rewrite (default Yii2 advanced)
+
+RewriteRule ^(.+)?$ frontend/web/$1 [L]

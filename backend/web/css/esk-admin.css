@@ -1,0 +1,375 @@
+/* =========================================================================
+   eSakip — Global Admin UI Restyle
+   Cakupan: SEMUA halaman admin (custom views + RBAC vendor mdmsoft).
+   Semua aturan di-scope ke ".pc-content" sehingga TIDAK menyentuh
+   sidebar (.pc-sidebar), header (.pc-header), maupun halaman login.
+   Sifatnya murni tampilan — tidak mengubah markup, data, atau fungsi.
+   ========================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.pc-content {
+  --esk-primary: #2563eb;
+  --esk-primary-dark: #1d4ed8;
+  --esk-ink: #0f172a;
+  --esk-muted: #64748b;
+  --esk-border: #e8edf3;
+  --esk-soft: #f7f9fc;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* -------------------------------------------------------------------------
+   Anti double-wrap
+   Sebagian view RBAC vendor (Assignment) sudah memiliki ".pc-container
+   .pc-content" sendiri. Karena layout admin juga membungkus konten, container
+   BAGIAN DALAM (yang bersarang) dinetralkan agar tidak kena offset ganda
+   (margin-left:280px + top:74px dua kali). Hanya menyasar container bersarang.
+   ------------------------------------------------------------------------- */
+.pc-content .pc-container {
+  position: static !important;
+  top: 0 !important;
+  margin-left: 0 !important;
+  min-height: 0 !important;
+}
+.pc-content .pc-content { padding: 0 !important; }
+
+/* -------------------------------------------------------------------------
+   Page header & breadcrumb
+   ------------------------------------------------------------------------- */
+.pc-content .page-header { margin-bottom: 22px; }
+.pc-content .page-header-title h2 {
+  font-weight: 700;
+  color: var(--esk-ink);
+  letter-spacing: -.2px;
+}
+.pc-content .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+.pc-content .breadcrumb-item a { color: var(--esk-primary); text-decoration: none; }
+.pc-content .breadcrumb-item a:hover { text-decoration: underline; }
+.pc-content .breadcrumb-item.active,
+.pc-content .breadcrumb-item[aria-current] { color: var(--esk-muted); }
+
+/* Judul polos (halaman RBAC vendor memakai <h1> langsung) */
+.pc-content > h1,
+.pc-content > div[class$="-index"] > h1,
+.pc-content > div[class$="-form"] > h1,
+.pc-content > div[class$="-view"] > h1,
+.pc-content > div[class$="-create"] > h1,
+.pc-content > div[class$="-update"] > h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--esk-ink);
+  letter-spacing: -.2px;
+  margin: 4px 0 20px;
+}
+
+/* -------------------------------------------------------------------------
+   Cards
+   ------------------------------------------------------------------------- */
+.pc-content .card {
+  border: 1px solid var(--esk-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -22px rgba(15, 23, 42, .35);
+  overflow: hidden;
+}
+.pc-content .card-header {
+  background: #fff;
+  border-bottom: 1px solid var(--esk-border);
+  padding: 18px 22px;
+}
+.pc-content .card-header h5 { font-weight: 700; color: var(--esk-ink); margin: 0; }
+.pc-content .card-header small { color: var(--esk-muted); }
+.pc-content .card-body { padding: 22px; }
+
+/* -------------------------------------------------------------------------
+   Buttons (variasi warna)
+   ------------------------------------------------------------------------- */
+.pc-content .btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform .12s ease, box-shadow .15s ease, filter .15s ease;
+}
+.pc-content .btn:hover { transform: translateY(-1px); filter: brightness(1.03); }
+.pc-content .btn:active { transform: translateY(0); }
+.pc-content .btn-sm { border-radius: 8px; }
+.pc-content .btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  box-shadow: 0 8px 18px -8px rgba(37, 99, 235, .6);
+}
+.pc-content .btn-success { background: linear-gradient(135deg, #22c55e, #16a34a); border: none; }
+.pc-content .btn-danger  { background: linear-gradient(135deg, #f87171, #dc2626); border: none; }
+.pc-content .btn-warning { background: linear-gradient(135deg, #fbbf24, #f59e0b); border: none; color: #fff; }
+.pc-content .btn-info    { background: linear-gradient(135deg, #38bdf8, #0ea5e9); border: none; color: #fff; }
+.pc-content .btn-secondary { background: linear-gradient(135deg, #94a3b8, #64748b); border: none; }
+.pc-content .btn-default {
+  background: #fff;
+  border: 1px solid var(--esk-border);
+  color: #334155;
+}
+.pc-content .btn-default:hover { background: var(--esk-soft); }
+/* Outline buttons tetap rapi */
+.pc-content .btn-outline-secondary { border-radius: 10px; }
+
+/* Jarak bawah tombol "Tambah/Create" pada halaman index */
+.pc-content .card-body > .btn-success:first-of-type { margin-bottom: 16px; }
+.pc-content > div[class$="-index"] > p { margin-bottom: 16px; }
+
+/* -------------------------------------------------------------------------
+   Tables (custom #table-style-hover + GridView vendor)
+   ------------------------------------------------------------------------- */
+.pc-content table#table-style-hover { font-size: 13px !important; }
+.pc-content .table {
+  border-color: var(--esk-border);
+  margin-bottom: 0;
+}
+.pc-content .table > thead > tr > th,
+.pc-content .table thead th {
+  background: var(--esk-soft);
+  color: #475569;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  border-bottom: 2px solid var(--esk-border);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.pc-content .table tbody td { vertical-align: middle; color: #334155; }
+.pc-content .table.table-hover tbody tr:hover { background: #f4f9ff; }
+.pc-content .table tfoot th {
+  background: var(--esk-soft);
+  color: #475569;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+}
+
+/* GridView vendor -> tampil seperti card */
+.pc-content .grid-view {
+  background: #fff;
+  border: 1px solid var(--esk-border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px -22px rgba(15, 23, 42, .35);
+}
+.pc-content .grid-view .summary { color: var(--esk-muted); font-size: 13px; margin-bottom: 10px; }
+.pc-content .grid-view table { margin-bottom: 0; }
+.pc-content .grid-view .filters input,
+.pc-content .grid-view .filters select { font-size: 13px; }
+.pc-content .grid-view .empty { color: var(--esk-muted); font-style: italic; }
+
+/* -------------------------------------------------------------------------
+   DataTables controls
+   ------------------------------------------------------------------------- */
+.pc-content .dataTables_wrapper .dataTables_length select,
+.pc-content .dataTables_wrapper .dataTables_filter input {
+  border: 1px solid var(--esk-border);
+  border-radius: 10px;
+  padding: 6px 12px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.pc-content .dataTables_wrapper .dataTables_filter input:focus,
+.pc-content .dataTables_wrapper .dataTables_length select:focus {
+  border-color: var(--esk-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .14);
+}
+.pc-content .dataTables_wrapper .dataTables_info { color: var(--esk-muted); font-size: 13px; }
+
+/* -------------------------------------------------------------------------
+   Forms
+   ------------------------------------------------------------------------- */
+.pc-content .form-control,
+.pc-content .form-select {
+  border: 1px solid var(--esk-border);
+  border-radius: 10px;
+  padding: 9px 12px;
+  font-size: 14px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.pc-content .form-control:focus,
+.pc-content .form-select:focus {
+  border-color: var(--esk-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, .14);
+}
+.pc-content .form-label,
+.pc-content label.control-label,
+.pc-content .control-label { font-weight: 600; color: #334155; font-size: 13.5px; }
+.pc-content .input-group .form-control { border-radius: 10px 0 0 10px; }
+.pc-content .input-group .input-group-btn .btn,
+.pc-content .input-group .btn { border-radius: 0 10px 10px 0; }
+/* Multi-select besar (RBAC Assignment / Routes) */
+.pc-content select.list,
+.pc-content select[multiple],
+.pc-content select[size] {
+  border: 1px solid var(--esk-border);
+  border-radius: 12px;
+  padding: 6px;
+}
+.pc-content .help-block { font-size: 12px; color: var(--esk-muted); margin-top: 4px; }
+.pc-content .has-error .form-control { border-color: #dc2626; }
+.pc-content .has-error .help-block { color: #dc2626; }
+
+/* -------------------------------------------------------------------------
+   Badges
+   ------------------------------------------------------------------------- */
+.pc-content .badge { border-radius: 999px; font-weight: 600; padding: .42em .85em; }
+
+/* -------------------------------------------------------------------------
+   Alerts
+   ------------------------------------------------------------------------- */
+.pc-content .alert { border: none; border-radius: 12px; font-size: 14px; padding: 12px 16px; }
+.pc-content .alert-success { background: rgba(22, 163, 74, .1); color: #15803d; }
+.pc-content .alert-danger  { background: rgba(220, 38, 38, .1); color: #b91c1c; }
+.pc-content .alert-warning { background: rgba(245, 158, 11, .12); color: #b45309; }
+.pc-content .alert-info    { background: rgba(14, 165, 233, .1); color: #0369a1; }
+
+/* -------------------------------------------------------------------------
+   Modals
+   ------------------------------------------------------------------------- */
+.pc-content .modal-content {
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px -20px rgba(2, 6, 23, .4);
+  overflow: hidden;
+}
+.pc-content .modal-header { border-bottom: 1px solid var(--esk-border); padding: 18px 22px; }
+.pc-content .modal-title { font-weight: 700; color: var(--esk-ink); }
+.pc-content .modal-body { padding: 22px; }
+.pc-content .modal-footer { border-top: 1px solid var(--esk-border); padding: 14px 22px; }
+
+/* -------------------------------------------------------------------------
+   Pagination (Yii LinkPager + DataTables Bootstrap5)
+   ------------------------------------------------------------------------- */
+.pc-content .pagination { gap: 4px; flex-wrap: wrap; }
+.pc-content .pagination .page-link {
+  border: 1px solid var(--esk-border);
+  border-radius: 8px !important;
+  color: #475569;
+  margin: 0 1px;
+  min-width: 36px;
+  text-align: center;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.pc-content .pagination .page-link:hover { background: #eef4ff; color: var(--esk-primary); }
+.pc-content .pagination .page-item.active .page-link {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-color: #2563eb;
+  color: #fff;
+}
+.pc-content .pagination .page-item.disabled .page-link { color: #cbd5e1; }
+
+/* Sedikit rapikan padding sel tabel (custom + GridView) */
+.pc-content .table > :not(caption) > * > * { padding-top: 11px; padding-bottom: 11px; }
+
+/* =========================================================================
+   SIDEBAR (.pc-sidebar) — restyle (di luar .pc-content)
+   Override aman via CSS variable tema + penegasan state aktif.
+   ========================================================================= */
+.pc-sidebar {
+  --pc-sidebar-active-color: #2563eb;
+  --pc-sidebar-color: #475569;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  border-right: 1px solid #eef2f7;
+}
+
+/* Brand / logo */
+.pc-sidebar .m-header { padding: 16px 22px; border-bottom: 1px solid #eef2f7; }
+.pc-sidebar .b-brand h5 { font-weight: 700; color: #0f172a; }
+.pc-sidebar .theme-version.badge {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  color: #fff !important;
+}
+
+/* Caption ("Menu Navigasi", "Apps", "Site Manajemen") */
+.pc-sidebar .pc-caption label {
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+/* Item & link */
+.pc-sidebar .pc-navbar > .pc-item { margin: 2px 12px; }
+.pc-sidebar .pc-link { border-radius: 12px; font-weight: 500; }
+.pc-sidebar .pc-micon i { color: #2563eb; }
+
+/* Hover (item tidak aktif) */
+.pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link { background: rgba(37, 99, 235, .06); }
+.pc-sidebar .pc-navbar > .pc-item:hover:not(.active) > .pc-link::after { opacity: 0; }
+
+/* Item AKTIF — pil gradient biru */
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff !important;
+  box-shadow: 0 8px 18px -8px rgba(37, 99, 235, .55);
+}
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link::after { opacity: 0; }
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-micon i,
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-mtext,
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-arrow i,
+.pc-sidebar .pc-navbar > .pc-item.active > .pc-link .pc-arrow svg { color: #fff !important; }
+
+/* Submenu */
+.pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.active > .pc-link,
+.pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.pc-trigger > .pc-link { font-weight: 600; }
+.pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.active > .pc-link::after { background: #2563eb; }
+
+/* Kartu Account & user */
+.pc-sidebar .nav-action-card,
+.pc-sidebar .pc-user-card { border-radius: 16px; }
+
+/* =========================================================================
+   HEADER (.pc-header) — restyle (di luar .pc-content)
+   ========================================================================= */
+.pc-header {
+  background: rgba(255, 255, 255, .88) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #eef2f7;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, .04);
+}
+.pc-header .pc-head-link {
+  border-radius: 10px;
+  color: #475569;
+  transition: background .15s ease, color .15s ease;
+}
+.pc-header .pc-head-link:hover,
+.pc-header .pc-head-link[aria-expanded="true"] { background: #eef4ff; color: #2563eb; }
+.pc-header .header-user-profile .user-avtar {
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
+}
+.pc-header .dropdown-menu {
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px -18px rgba(15, 23, 42, .35);
+}
+
+/* ============ Tombol toggle sidebar di MOBILE — selalu terlihat ============ */
+@media (max-width: 1024px) {
+  .pc-header .pc-h-item.pc-sidebar-collapse { display: none !important; }
+  .pc-header .pc-h-item.pc-sidebar-popup { display: inline-flex !important; align-items: center; }
+  .pc-header #mobile-collapse {
+    display: inline-flex !important; align-items: center; justify-content: center;
+    width: 42px; height: 42px; border-radius: 10px; background-color: #eef4ff; padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round'%3E%3Cline x1='4' y1='7' x2='20' y2='7'/%3E%3Cline x1='4' y1='12' x2='20' y2='12'/%3E%3Cline x1='4' y1='17' x2='20' y2='17'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: center; background-size: 22px;
+  }
+  .pc-header #mobile-collapse i { display: none; }
+}
+
+/* Dropdown select: beri ruang panah agar tidak menimpa teks */
+.pc-content .form-select { padding-right: 2.5rem !important; background-position: right 0.85rem center; min-width: 90px; }
+.pc-content select.form-control { padding-right: 2.25rem !important; min-width: 90px; }

@@ -1,0 +1,902 @@
+openapi: 3.0.0
+info:
+  title: ESAKIP API Documentation
+  version: 1.0.0
+
+servers:
+  - url: esakip/doc-api/frontend/web/index.php
+
+paths:
+  /EsakipApi/User:
+    get:
+      tags:
+        - GET
+      summary: Ambil semua user
+      parameters:
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/user
+      description: Endpoint untuk mengambil semua user dari database
+      responses:
+        "200":
+          description: Data user berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        username:
+                          type: string
+                        email:
+                          type: string
+                        nama_user:
+                          type: string
+                        refskpd_id:
+                          type: integer
+                        refpegawai_id:
+                          type: integer
+                        kode_group:
+                          type: integer
+                        status:
+                          type: integer
+                        created_at:
+                          type: integer
+                        updated_at:
+                          type: integer
+                        user_lastlogin:
+                          type: string
+                          format: date-time
+                        user_lastloginip:
+                          type: string
+                        user_isonline:
+                          type: string
+
+  /EsakipApi/Skpd:
+    get:
+      tags:
+        - GET
+      summary: Ambil semua SKPD
+      parameters:
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/skpd
+      description: Endpoint untuk mengambil semua data SKPD
+      responses:
+        "200":
+          description: Data SKPD berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        kode_skpd:
+                          type: string
+                        nama_skpd:
+                          type: string
+                        kepala_skpd:
+                          type: string
+                        nip_kepala:
+                          type: string
+                        jabatan_kepala:
+                          type: string
+                        pangkat_kepala:
+                          type: string
+                        refskpd_unit:
+                          type: string
+                        skpd_isaktif:
+                          type: string
+                        refurusan_id:
+                          type: integer
+                        refbidang_id:
+                          type: integer
+                        refskpd_keterangan:
+                          type: string
+
+  /EsakipApi/Program:
+    get:
+      tags:
+        - GET
+      summary: Ambil data program dengan pagination
+      parameters:
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/program
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: Nomor halaman
+          example: 1
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Jumlah data per halaman
+          example: 10
+      description: Endpoint untuk mengambil data program dengan pagination
+      responses:
+        "200":
+          description: Data program berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                  page:
+                    type: integer
+                  limit:
+                    type: integer
+                  total:
+                    type: integer
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refprogram_id:
+                          type: integer
+                        kode_program:
+                          type: string
+                        nama_program:
+                          type: string
+                        refurusan_id:
+                          type: integer
+                        refbidang_id:
+                          type: integer
+                        program_isaktif:
+                          type: string
+
+  /EsakipApi/Kegiatan:
+    get:
+      tags:
+        - GET
+      summary: Ambil data kegiatan dengan pagination
+      parameters:
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/kegiatan
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: Nomor halaman
+          example: 1
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Jumlah data per halaman
+          example: 10
+      description: Endpoint untuk mengambil data kegiatan dengan pagination
+      responses:
+        "200":
+          description: Data kegiatan berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                  page:
+                    type: integer
+                  limit:
+                    type: integer
+                  total:
+                    type: integer
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refkegiatan_id:
+                          type: integer
+                        kode_kegiatan:
+                          type: string
+                        nama_kegiatan:
+                          type: string
+                        refurusan_id:
+                          type: integer
+                        refbidang_id:
+                          type: integer
+                        refprogram_id:
+                          type: integer
+                        kegiatan_isaktif:
+                          type: string
+
+  /EsakipApi/Subkegiatan:
+    get:
+      tags:
+        - GET
+      summary: Ambil data subkegiatan dengan pagination
+      parameters:
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/subkegiatan
+        - in: query
+          name: page
+          schema:
+            type: integer
+          description: Nomor halaman
+          example: 1
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          description: Jumlah data per halaman
+          example: 10
+      description: Endpoint untuk mengambil data subkegiatan dengan pagination
+      responses:
+        "200":
+          description: Data subkegiatan berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                  page:
+                    type: integer
+                  limit:
+                    type: integer
+                  total:
+                    type: integer
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refsubkegiatan_id:
+                          type: integer
+                        kode_subkegiatan:
+                          type: string
+                        nama_subkegiatan:
+                          type: string
+                        refurusan_id:
+                          type: integer
+                        refbidang_id:
+                          type: integer
+                        refprogram_id:
+                          type: integer
+                        refkegiatan_id:
+                          type: integer
+                        subkegiatan_isaktif:
+                          type: string
+
+  /EsakipApi/CapkinIndikatorRenstra:
+    get:
+      tags:
+        - GET
+      summary: Ambil data Capaian Kinerja INDIKATOR RENSTRA berdasarkan periode dan SKPD
+      description: Endpoint untuk mengambil Capaian Kinerja data sasaran RENSTRA beserta indikator dan data triwulan berdasarkan refperiode_id dan refskpd_id
+      parameters:
+        - in: query
+          name: refperiode_id
+          required: false
+          schema:
+            type: integer
+          description: ID Periode RENSTRA (jika tidak diisi, maka akan menggunakan periode aktif atau default)
+        - in: query
+          name: refskpd_id
+          required: false
+          schema:
+            type: integer
+          description: ID SKPD yang ingin ditampilkan (jika tidak diisi, maka semua SKPD akan ditampilkan)
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/capkin-indikator-renstra
+      responses:
+        "200":
+          description: Data RENSTRA berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                    # example: true
+                  refperiode_id:
+                    type: integer
+                    description: Periode yang digunakan
+                  refskpd_id:
+                    type: integer
+                    nullable: true
+                    description: ID SKPD yang digunakan untuk filter (jika ada)
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refskpd_id:
+                          type: integer
+                        nama_skpd:
+                          type: string
+                        sasaran:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              refsasaranrenstra_id:
+                                type: integer
+                              uraian_sasaranrenstra:
+                                type: string
+                              alasan_sasaranrenstra:
+                                type: string
+                              kriteria_sasaranrenstra:
+                                type: string
+                              formulasi_sasaranrenstra:
+                                type: string
+                              indikator:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    refindikatorsasaranrenstra_id:
+                                      type: integer
+                                    uraian_indikatorsasaranrenstra:
+                                      type: string
+                                    indikatorsasaranrenstra_satuan:
+                                      type: string
+                                    indikatorsasaranrenstra_target:
+                                      type: string
+                                    target_rkt:
+                                      type: string
+                                    target_rkt_p:
+                                      type: string
+                                    target_pk:
+                                      type: string
+                                    target_pk_p:
+                                      type: string
+                                    realisasi:
+                                      type: string
+                                    capaian:
+                                      type: string
+                                    analisis:
+                                      type: string
+                                    keterangan:
+                                      type: string
+                                    triwulan:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          reftriwulan_id:
+                                            type: integer
+                                          triwulan_target_rkt:
+                                            type: string
+                                          triwulan_target_rkt_p:
+                                            type: string
+                                          triwulan_target_pk:
+                                            type: string
+                                          triwulan_target_pk_p:
+                                            type: string
+                                          triwulan_realisasi:
+                                            type: string
+                                          triwulan_capaian:
+                                            type: string
+                                          triwulan_keterangan:
+                                            type: string
+                                          triwulan_analisis:
+                                            type: string
+
+  /EsakipApi/CariCapkinIndikatorRenstra:
+    post:
+      tags:
+        - POST
+      summary: Ambil data Capaian Kinerja INDIKATOR RENSTRA berdasarkan periode dan SKPD
+      description: >
+        Endpoint untuk mengambil Capaian Kinerja data sasaran RENSTRA beserta indikator dan data triwulan
+        berdasarkan refperiode_id dan refskpd_id melalui body POST.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                refperiode_id:
+                  type: integer
+                  description: ID Periode RENSTRA (wajib diisi, jika tidak, sistem akan ambil periode aktif)
+                refskpd_id:
+                  type: integer
+                  description: ID SKPD (jika tidak diisi, maka semua SKPD ditampilkan)
+      responses:
+        "200":
+          description: Data RENSTRA berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms:
+                    type: number
+                    description: Waktu respon dalam milidetik
+                  refperiode_id:
+                    type: integer
+                  refskpd_id:
+                    type: integer
+                    nullable: true
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refskpd_id:
+                          type: integer
+                        nama_skpd:
+                          type: string
+                        sasaran:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              uraian_sasaran:
+                                type: string
+                              indikator:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uraian_indikator:
+                                      type: string
+                                    triwulan:
+                                      type: array
+                                      items:
+                                        type: object
+
+  /EsakipApi/CapkinIndikatorProgram:
+    get:
+      tags:
+        - GET
+      summary: Ambil data Capaian Kinerja INDIKATOR PROGRAM berdasarkan periode dan SKPD
+      description: >
+        Endpoint untuk mengambil Capaian Kinerja data program beserta indikator dan data triwulan
+        berdasarkan refperiode_id dan refskpd_id.
+      parameters:
+        - in: query
+          name: refperiode_id
+          required: false
+          schema:
+            type: integer
+          description: ID Periode RENSTRA (jika tidak diisi, maka akan menggunakan periode aktif atau default)
+        - in: query
+          name: refskpd_id
+          required: false
+          schema:
+            type: integer
+          description: ID SKPD yang ingin ditampilkan (jika tidak diisi, maka semua SKPD akan ditampilkan)
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/capkin-indikator-program
+      responses:
+        "200":
+          description: Data PROGRAM berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                    # example: true
+                  refperiode_id:
+                    type: integer
+                    description: Periode yang digunakan
+                  refskpd_id:
+                    type: integer
+                    nullable: true
+                    description: ID SKPD yang digunakan untuk filter (jika ada)
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refskpd_id:
+                          type: integer
+                          example: 2
+                        nama_skpd:
+                          type: string
+                          example: "Dinas Pendidikan"
+                        program:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              uraian_program:
+                                type: string
+                                example: "Peningkatan Mutu Pendidikan"
+                              indikator:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uraian_indikator:
+                                      type: string
+                                      example: "Persentase kelulusan siswa"
+                                    program_satuan:
+                                      type: string
+                                      example: "Persen"
+                                    triwulan:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          reftriwulan_id:
+                                            type: integer
+                                            example: 1
+                                          triwulan_target_rkt:
+                                            type: string
+                                            example: "90"
+                                          triwulan_target_rkt_p:
+                                            type: string
+                                            example: "90%"
+                                          triwulan_target_pk:
+                                            type: string
+                                            example: "85"
+                                          triwulan_target_pk_p:
+                                            type: string
+                                            example: "85%"
+                                          triwulan_realisasi:
+                                            type: string
+                                            example: "88"
+                                          triwulan_capaian:
+                                            type: string
+                                            example: "97.8%"
+                                          triwulan_keterangan:
+                                            type: string
+                                            example: "Membaik dari triwulan sebelumnya"
+                                          triwulan_analisis:
+                                            type: string
+                                            example: "Peningkatan dikarenakan program pelatihan guru"
+
+  /EsakipApi/CapkinIndikatorKegiatan:
+    get:
+      tags:
+        - GET
+      summary: Ambil data Capaian Kinerja INDIKATOR KEGIATAN berdasarkan periode dan SKPD
+      description: >
+        Endpoint untuk mengambil Capaian Kinerja data kegiatan beserta indikator dan data triwulan
+        berdasarkan refperiode_id dan refskpd_id.
+      parameters:
+        - in: query
+          name: refperiode_id
+          required: false
+          schema:
+            type: integer
+          description: ID Periode RENSTRA (jika tidak diisi, maka akan menggunakan periode aktif atau default)
+        - in: query
+          name: refskpd_id
+          required: false
+          schema:
+            type: integer
+          description: ID SKPD yang ingin ditampilkan (jika tidak diisi, maka semua SKPD akan ditampilkan)
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/capkin-indikator-kegiatan
+      responses:
+        "200":
+          description: Data KEGIATAN berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response_time_ms: # ✅ Tambah di sini
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 124.56
+                    # example: true
+                  refperiode_id:
+                    type: integer
+                    description: Periode yang digunakan
+                  refskpd_id:
+                    type: integer
+                    nullable: true
+                    description: ID SKPD yang digunakan untuk filter (jika ada)
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refskpd_id:
+                          type: integer
+                          example: 2
+                        nama_skpd:
+                          type: string
+                          example: "Dinas Pendidikan"
+                        kegiatan:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              uraian_kegiatan:
+                                type: string
+                                example: "Peningkatan Mutu Pendidikan"
+                              kegiatan_satuan:
+                                type: string
+                                example: "Persen"
+                              indikator:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uraian_indikator:
+                                      type: string
+                                      example: "Persentase kelulusan siswa"
+                                    target_rkt:
+                                      type: string
+                                      example: "90"
+                                    target_rkt_p:
+                                      type: string
+                                      example: "90%"
+                                    target_pk:
+                                      type: string
+                                      example: "85"
+                                    target_pk_p:
+                                      type: string
+                                      example: "85%"
+                                    realisasi:
+                                      type: string
+                                      example: "88"
+                                    capaian:
+                                      type: string
+                                      example: "97.8%"
+                                    keterangan:
+                                      type: string
+                                      example: "Membaik dari tahun sebelumnya"
+                                    analisis:
+                                      type: string
+                                      example: "Peningkatan dikarenakan pelatihan guru"
+                                    triwulan:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          refindikatorkegiatantriwulan_id:
+                                            type: integer
+                                            example: 1
+                                          triwulan_target_rkt:
+                                            type: string
+                                            example: "90"
+                                          triwulan_target_rkt_p:
+                                            type: string
+                                            example: "90%"
+                                          triwulan_target_pk:
+                                            type: string
+                                            example: "85"
+                                          triwulan_target_pk_p:
+                                            type: string
+                                            example: "85%"
+                                          triwulan_realisasi:
+                                            type: string
+                                            example: "88"
+                                          triwulan_capaian:
+                                            type: string
+                                            example: "97.8%"
+                                          triwulan_keterangan:
+                                            type: string
+                                            example: "Membaik dari triwulan sebelumnya"
+                                          triwulan_analisis:
+                                            type: string
+                                            example: "Peningkatan dikarenakan program pelatihan guru"
+
+  /EsakipApi/CapkinIndikatorSubkegiatan:
+    get:
+      tags:
+        - GET
+      summary: Ambil data Capaian Kinerja INDIKATOR SUBKEGIATAN berdasarkan periode dan SKPD
+      description: >
+        Endpoint untuk mengambil Capaian Kinerja data subkegiatan beserta indikator dan data triwulan
+        berdasarkan refperiode_id dan refskpd_id.
+      parameters:
+        - in: query
+          name: refperiode_id
+          required: false
+          schema:
+            type: integer
+          description: ID Periode RENSTRA (jika tidak diisi, menggunakan periode aktif atau default)
+        - in: query
+          name: refskpd_id
+          required: false
+          schema:
+            type: integer
+          description: ID SKPD untuk filter (jika tidak diisi, semua SKPD ditampilkan)
+        - in: query
+          name: r
+          required: true
+          schema:
+            type: string
+          example: esakip-api/capkin-indikator-subkegiatan
+      responses:
+        "200":
+          description: Data SUBKEGIATAN berhasil diambil
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  response_time_ms:
+                    type: number
+                    description: Waktu respon dalam milidetik
+                    example: 120.35
+                  refperiode_id:
+                    type: integer
+                    description: Periode yang digunakan
+                  refskpd_id:
+                    type: integer
+                    nullable: true
+                    description: ID SKPD untuk filter (jika ada)
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        refskpd_id:
+                          type: integer
+                          example: 2
+                        nama_skpd:
+                          type: string
+                          example: "Dinas Pendidikan"
+                        subkegiatan:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              uraian_subkegiatan:
+                                type: string
+                                example: "Peningkatan Mutu Pendidikan Dasar"
+                              subkegiatan_satuan:
+                                type: string
+                                example: "Persen"
+                              subkegiatan_target:
+                                type: string
+                                example: "100"
+                              subkegiatan_anggaran:
+                                type: string
+                                example: "50000000"
+                              indikator:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    uraian_indikator:
+                                      type: string
+                                      example: "Persentase kelulusan siswa SD"
+                                    target_rkt:
+                                      type: string
+                                      example: "90"
+                                    target_rkt_p:
+                                      type: string
+                                      example: "90%"
+                                    target_pk:
+                                      type: string
+                                      example: "85"
+                                    target_pk_p:
+                                      type: string
+                                      example: "85%"
+                                    realisasi:
+                                      type: string
+                                      example: "88"
+                                    capaian:
+                                      type: string
+                                      example: "97.8%"
+                                    keterangan:
+                                      type: string
+                                      example: "Membaik dari tahun sebelumnya"
+                                    analisis:
+                                      type: string
+                                      example: "Peningkatan dikarenakan pelatihan guru"
+                                    triwulan:
+                                      type: array
+                                      items:
+                                        type: object
+                                        properties:
+                                          refindikatorsubkegiatantriwulan_id:
+                                            type: integer
+                                            example: 1
+                                          triwulan_target_rkt:
+                                            type: string
+                                            example: "90"
+                                          triwulan_target_rkt_p:
+                                            type: string
+                                            example: "90%"
+                                          triwulan_target_pk:
+                                            type: string
+                                            example: "85"
+                                          triwulan_target_pk_p:
+                                            type: string
+                                            example: "85%"
+                                          triwulan_realisasi:
+                                            type: string
+                                            example: "88"
+                                          triwulan_capaian:
+                                            type: string
+                                            example: "97.8%"
+                                          triwulan_keterangan:
+                                            type: string
+                                            example: "Membaik dari triwulan sebelumnya"
+                                          triwulan_analisis:
+                                            type: string
+                                            example: "Peningkatan dikarenakan program pelatihan guru"
+                                          penyerapan_anggaran:
+                                            type: string
+                                            example: "12000000"

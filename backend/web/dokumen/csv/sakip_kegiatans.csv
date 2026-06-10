@@ -1,0 +1,515 @@
+﻿;;;;;;
+1;1.01.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;1;1;1;T
+2;1.01.01.2.02;Administrasi Keuangan Perangkat Daerah;1;1;1;T
+3;1.01.01.2.03;Administrasi Barang Milik Daerah pada Perangkat Daerah;1;1;1;T
+4;1.01.01.2.05;Administrasi Kepegawaian Perangkat Daerah;1;1;1;T
+5;1.01.01.2.06;Administrasi Umum Perangkat Daerah;1;1;1;T
+6;1.01.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;1;1;1;T
+7;1.01.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;1;1;1;T
+8;1.01.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;1;1;1;T
+9;1.01.02.2.01;Pengelolaan Pendidikan Sekolah Dasar;1;1;2;T
+10;1.01.02.2.02;Pengelolaan Pendidikan Sekolah Menengah Pertama;1;1;2;T
+11;1.01.02.2.03;Pengelolaan Pendidikan Anak Usia Dini (PAUD);1;1;2;T
+12;1.01.02.2.04;Pengelolaan Pendidikan Nonformal/Kesetaraan;1;1;2;T
+13;1.01.03.2.01;Penetapan Kurikulum Muatan Lokal Pendidikan Dasar;1;1;3;T
+14;1.01.04.2.01;Pemerataan Kuantitas dan Kualitas Pendidik dan Tenaga Kependidikan bagi Satuan Pendidikan Dasar, PAUD, dan Pendidikan Nonformal/Kesetaraan;1;1;4;T
+15;1.02.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;1;2;5;T
+16;1.02.01.2.02;Administrasi Keuangan Perangkat Daerah;1;2;5;T
+17;1.02.01.2.05;Administrasi Kepegawaian Perangkat Daerah;1;2;5;T
+18;1.02.01.2.06;Administrasi Umum Perangkat Daerah;1;2;5;T
+19;1.02.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;1;2;5;T
+20;1.02.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;1;2;5;T
+21;1.02.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;1;2;5;T
+22;1.02.01.2.10;Peningkatan Pelayanan BLUD;1;2;5;T
+23;1.02.02.2.01;Penyediaan Fasilitas Pelayanan Kesehatan untuk UKM dan UKP Kewenangan Daerah Kabupaten/Kota;1;2;6;T
+24;1.02.02.2.02;Penyediaan Layanan Kesehatan untuk UKM dan UKP Rujukan Tingkat Daerah Kabupaten/Kota;1;2;6;T
+25;1.02.02.2.03;Penyelenggaraan Sistem Informasi Kesehatan secara Terintegrasi;1;2;6;T
+26;1.02.02.2.04;Penerbitan Izin Rumah Sakit Kelas C, D dan Fasilitas Pelayanan Kesehatan Tingkat Daerah Kabupaten/Kota;1;2;6;T
+27;1.02.03.2.02;Perencanaan Kebutuhan dan Pendayagunaan Sumberdaya Manusia Kesehatan untuk UKP dan UKM di Wilayah Kabupaten/Kota;1;2;7;T
+28;1.02.03.2.03;Pengembangan Mutu dan Peningkatan Kompetensi Teknis Sumber Daya Manusia Kesehatan Tingkat Daerah Kabupaten/Kota;1;2;7;T
+29;1.02.04.2.01;Pemberian Izin Apotek, Toko Obat, Toko Alat Kesehatan dan Optikal, Usaha Mikro Obat Tradisional (UMOT);1;2;8;T
+30;1.02.04.2.03;Penerbitan Sertifikat Produksi Pangan Industri Rumah Tangga dan Nomor P-IRT sebagai Izin Produksi, untuk Produk Makanan Minuman Tertentu yang Dapat Diproduksi oleh Industri Rumah Tangga;1;2;8;T
+31;1.02.04.2.04;Penerbitan Sertifikat Laik Higiene Sanitasi Tempat Pengelolaan Makanan (TPM) antara lain Jasa Boga, Rumah Makan/Restoran dan Depot Air Minum (DAM);1;2;8;T
+32;1.02.04.2.05;Penerbitan Stiker Pembinaan pada Makanan Jajanan dan Sentra Makanan Jajanan;1;2;8;T
+33;1.02.05.2.01;Advokasi, Pemberdayaan, Kemitraan, Peningkatan Peran serta Masyarakat dan Lintas Sektor Tingkat Daerah Kabupaten/Kota;1;2;9;T
+34;1.02.05.2.02;Pelaksanaan Sehat dalam rangka Promotif Preventif Tingkat Daerah Kabupaten/Kota;1;2;9;T
+35;1.02.05.2.03;Pengembangan dan Pelaksanaan Upaya Kesehatan Bersumber Daya Masyarakat (UKBM) Tingkat Daerah Kabupaten/Kota;1;2;9;T
+36;1.03.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;1;3;10;T
+37;1.03.01.2.02;Administrasi Keuangan Perangkat Daerah;1;3;10;T
+38;1.03.01.2.05;Administrasi Kepegawaian Perangkat Daerah;1;3;10;T
+39;1.03.01.2.06;Administrasi Umum Perangkat Daerah;1;3;10;T
+40;1.03.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;1;3;10;T
+41;1.03.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;1;3;10;T
+42;1.03.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;1;3;10;T
+43;1.03.02.2.01;Pengelolaan SDA dan Bangunan Pengaman Pantai pada Wilayah Sungai (WS) dalam 1 (satu) Daerah Kabupaten/Kota;1;3;11;T
+44;1.03.02.2.02;Pengembangan dan Pengelolaan Sistem Irigasi Primer dan Sekunder pada Daerah Irigasi yang Luasnya dibawah 1000 Ha dalam 1 (satu) Daerah Kabupaten/Kota;1;3;11;T
+45;1.03.03.2.01;Pengelolaan dan Pengembangan Sistem Penyediaan Air Minum (SPAM) di Daerah Kabupaten/Kota;1;3;12;T
+46;1.03.04.2.01;Pengembangan Sistem dan Pengelolaan Persampahan di Daerah Kabupaten/Kota;1;3;13;T
+47;1.03.05.2.01;Pengelolaan dan Pengembangan Sistem Air Limbah Domestik dalam Daerah Kabupaten/Kota;1;3;14;T
+48;1.03.06.2.01;Pengelolaan dan Pengembangan Sistem Drainase yang Terhubung Langsung dengan Sungai dalam Daerah Kabupaten/Kota;1;3;15;T
+49;1.03.08.2.01;Penyelenggaraan Bangunan Gedung di Wilayah Daerah Kabupaten/Kota, Pemberian Izin Mendirikan Bangunan (IMB) dan Sertifikat Laik Fungsi Bangunan Gedung;1;3;16;T
+50;1.03.10.2.01;Penyelenggaraan Jalan Kabupaten/Kota;1;3;17;T
+51;1.03.11.2.01;Penyelenggaraan Pelatihan Tenaga Terampil Konstruksi;1;3;18;T
+52;1.03.11.2.02;Penyelenggaraan Sistem Informasi Jasa Konstruksi Cakupan Daerah Kabupaten/Kota;1;3;18;T
+53;1.03.11.2.03;Penerbitan Izin Usaha Jasa Konstruksi Nasional (Non Kecil dan Kecil);1;3;18;T
+54;1.03.11.2.04;Pengawasan Tertib Usaha, Tertib Penyelenggaraan dan Tertib Pemanfaatan Jasa Konstruksi;1;3;18;T
+55;1.03.12.2.01;Penetapan Rencana Tata Ruang Wilayah (RTRW) dan Rencana Rinci Tata Ruang (RRTR) Kabupaten/Kota;1;3;19;T
+56;1.03.12.2.02;Koordinasi dan Sinkronisasi Perencanaan Tata Ruang Daerah Kabupaten/Kota;1;3;19;T
+57;1.03.12.2.03;Koordinasi dan Sinkronisasi Pemanfaatan Ruang Daerah Kabupaten/Kota;1;3;19;T
+58;1.03.12.2.04;Koordinasi dan Sinkronisasi Pengendalian Pemanfaatan Ruang Daerah Kabupaten/Kota;1;3;19;T
+59;1.04.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;1;4;20;T
+60;1.04.01.2.02;Administrasi Keuangan Perangkat Daerah;1;4;20;T
+61;1.04.01.2.05;Administrasi Kepegawaian Perangkat Daerah;1;4;20;T
+62;1.04.01.2.06;Administrasi Umum Perangkat Daerah;1;4;20;T
+63;1.04.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;1;4;20;T
+64;1.04.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;1;4;20;T
+65;1.04.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;1;4;20;T
+66;1.04.02.2.01;Pendataan Penyediaan dan Rehabilitasi Rumah Korban Bencana atau Relokasi Program Kabupaten/Kota;1;4;21;T
+67;1.04.02.2.02;Sosialisasi dan Persiapan Penyediaan dan Rehabilitasi Rumah Korban Bencana atau Relokasi Program Kabupaten/Kota;1;4;21;T
+68;1.04.02.2.03;Pembangunan dan Rehabilitasi Rumah Korban Bencana atau Relokasi Program Kabupaten/Kota;1;4;21;T
+69;1.04.02.2.06;Penerbitan Izin Pembangunan dan Pengembangan Perumahan;1;4;21;T
+70;1.04.03.2.01;Penerbitan Izin Pembangunan dan Pengembangan Kawasan Permukiman;1;4;22;T
+71;1.04.03.2.02;Penataan dan Peningkatan Kualitas Kawasan Permukiman Kumuh dengan Luas di Bawah 10 (Sepuluh) Ha;1;4;22;T
+72;1.04.03.2.03;Peningkatan Kualitas Kawasan Permukiman Kumuh dengan Luas di Bawah 10 (Sepuluh) Ha;1;4;22;T
+73;1.04.04.2.01;Pencegahan Perumahan dan Kawasan Permukiman Kumuh pada Daerah Kabupaten/Kota;1;4;23;T
+74;1.04.05.2.01;Urusan Penyelenggaraan PSU Perumahan;1;4;24;T
+75;1.05.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;1;5;25;T
+76;1.05.01.2.02;Administrasi Keuangan Perangkat Daerah;1;5;25;T
+77;1.05.01.2.05;Administrasi Kepegawaian Perangkat Daerah;1;5;25;T
+78;1.05.01.2.06;Administrasi Umum Perangkat Daerah;1;5;25;T
+79;1.05.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;1;5;25;T
+80;1.05.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;1;5;25;T
+81;1.05.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;1;5;25;T
+82;1.05.02.2.01;Penanganan Gangguan Ketenteraman dan Ketertiban Umum dalam 1 (satu) Daerah Kabupaten/Kota;1;5;26;T
+83;1.05.03.2.01;Pelayanan Informasi Rawan Bencana Kabupaten/Kota;1;5;27;T
+84;1.05.03.2.02;Pelayanan Pencegahan dan Kesiapsiagaan Terhadap Bencana;1;5;27;T
+85;1.05.03.2.03;Pelayanan Penyelamatan dan Evakuasi Korban Bencana;1;5;27;T
+86;1.05.03.2.04;Penataan Sistem Dasar Penanggulangan Bencana;1;5;27;T
+87;1.05.04.2.01;Pencegahan, Pengendalian, Pemadaman, Penyelamatan, dan Penanganan Bahan Berbahaya dan Beracun Kebakaran dalam Daerah Kabupaten/Kota;1;5;28;T
+88;1.05.04.2.02;Inspeksi Peralatan Proteksi Kebakaran;1;5;28;T
+89;1.05.04.2.04;Pemberdayaan Masyarakat dalam Pencegahan Kebakaran;1;5;28;T
+90;1.05.04.2.05;Penyelenggaraan Operasi Pencarian dan Pertolongan Terhadap Kondisi Membahayakan Manusia;1;5;28;T
+91;1.06.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;1;6;30;T
+92;1.06.01.2.02;Administrasi Keuangan Perangkat Daerah;1;6;30;T
+93;1.06.01.2.05;Administrasi Kepegawaian Perangkat Daerah;1;6;30;T
+94;1.06.01.2.06;Administrasi Umum Perangkat Daerah;1;6;30;T
+95;1.06.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;1;6;30;T
+96;1.06.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;1;6;30;T
+97;1.06.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;1;6;30;T
+98;1.06.02.2.03;Pengembangan Potensi Sumber Kesejahteraan Sosial Daerah Kabupaten/Kota;1;6;31;T
+99;1.06.04.2.01;Rehabilitasi Sosial Dasar Penyandang Disabilitas Terlantar, Anak Terlantar, Lanjut Usia Terlantar, serta Gelandangan Pengemis di Luar Panti Sosial;1;6;32;T
+100;1.06.04.2.02;Rehabilitasi Sosial Penyandang Masalah Kesejahteraan Sosial (PMKS) Lainnya Bukan Korban HIV/AIDS dan NAPZA di Luar Panti Sosial;1;6;32;T
+101;1.06.05.2.02;Pengelolaan Data Fakir Miskin Cakupan Daerah Kabupaten/Kota;1;6;33;T
+102;1.06.06.2.01;Perlindungan Sosial Korban Bencana Alam dan Sosial Kabupaten/Kota;1;6;34;T
+103;1.06.06.2.02;Penyelenggaraan Pemberdayaan Masyarakat terhadap Kesiapsiagaan Bencana Kabupaten/Kota;1;6;34;T
+104;1.06.07.2.001;Pemeliharaan Taman Makam Pahlawan Nasional Kabupaten/Kota;1;6;35;T
+105;1.06.07.2.01;Pemeliharaan Taman Makam Pahlawan Nasional Kabupaten/Kota;1;6;35;T
+106;2.07.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;7;36;T
+107;2.07.01.2.02;Administrasi Keuangan Perangkat Daerah;2;7;36;T
+108;2.07.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;7;36;T
+109;2.07.01.2.06;Administrasi Umum Perangkat Daerah;2;7;36;T
+110;2.07.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;7;36;T
+111;2.07.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;7;36;T
+112;2.07.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;7;36;T
+113;2.07.02.2.01;Penyusunan Rencana Tenaga Kerja (RTK);2;7;37;T
+114;2.07.03.2.01;Pelaksanaan Pelatihan berdasarkan Unit Kompetensi;2;7;38;T
+115;2.07.03.2.02;Pembinaan Lembaga Pelatihan Kerja Swasta;2;7;38;T
+116;2.07.03.2.04;Konsultansi Produktivitas pada Perusahaan Kecil;2;7;38;T
+117;2.07.04.2.01;Pelayanan antar Kerja di Daerah Kabupaten/Kota;2;7;39;T
+118;2.07.04.2.03;Pengelolaan Informasi Pasar Kerja;2;7;39;T
+119;2.07.04.2.04;Pelindungan PMI (Pra dan Purna Penempatan) di Daerah Kabupaten/Kota;2;7;39;T
+120;2.07.05.2.01;Pengesahan Peraturan Perusahaan dan Pendaftaran Perjanjian Kerja Bersama untuk Perusahaan yang Hanya Beroperasi dalam 1 (Satu) Daerah Kabupaten/Kota;2;7;40;T
+121;2.07.05.2.02;Pencegahan dan Penyelesaian Perselisihan Hubungan Industrial, Mogok Kerja dan Penutupan Perusahaan di Daerah Kabupaten/Kota;2;7;40;T
+122;2.08.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;8;41;T
+123;2.08.01.2.02;Administrasi Keuangan Perangkat Daerah;2;8;41;T
+124;2.08.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;8;41;T
+125;2.08.01.2.06;Administrasi Umum Perangkat Daerah;2;8;41;T
+126;2.08.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;8;41;T
+127;2.08.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;8;41;T
+128;2.08.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;8;41;T
+129;2.08.02.2.01;Pelembagaan Pengarusutamaan Gender (PUG) pada Lembaga Pemerintah Kewenangan Kabupaten/Kota;2;8;42;T
+130;2.08.02.2.02;Pemberdayaan Perempuan Bidang Politik, Hukum, Sosial, dan Ekonomi pada Organisasi Kemasyarakatan Kewenangan Kabupaten/Kota;2;8;42;T
+131;2.08.02.2.03;Penguatan dan Pengembangan Lembaga Penyedia Layanan Pemberdayaan Perempuan Kewenangan Kabupaten/Kota;2;8;42;T
+132;2.08.03.2.01;Pencegahan Kekerasan terhadap Perempuan Lingkup Daerah Kabupaten/Kota;2;8;43;T
+133;2.08.03.2.02;Penyediaan Layanan Rujukan Lanjutan bagi Perempuan Korban Kekerasan yang Memerlukan Koordinasi Kewenangan Kabupaten/Kota;2;8;43;T
+134;2.08.03.2.03;Penguatan dan Pengembangan Lembaga Penyedia Layanan Perlindungan Perempuan Tingkat Daerah Kabupaten/Kota;2;8;43;T
+135;2.08.04.2.02;Penguatan dan Pengembangan Lembaga Penyedia Layanan Peningkatan Kualitas Keluarga dalam Mewujudkan KG dan Hak Anak yang Wilayah Kerjanya dalam Daerah Kabupaten/Kota;2;8;44;T
+136;2.08.05.2.01;Pengumpulan, Pengolahan Analisis dan Penyajian Data Gender dan Anak Dalam Kelembagaan Data di Tingkat Daerah Kabupaten/Kota;2;8;45;T
+137;2.08.06.2.01;Pelembagaan PHA pada Lembaga Pemerintah, Nonpemerintah, dan Dunia Usaha Kewenangan Kabupaten/Kota;2;8;46;T
+138;2.08.06.2.02;Penguatan dan Pengembangan Lembaga Penyedia Layanan Peningkatan Kualitas Hidup Anak Kewenangan Kabupaten/Kota;2;8;46;T
+139;2.08.07.2.01;Pencegahan Kekerasan Terhadap Anak yang Melibatkan para Pihak Lingkup Daerah Kabupaten/Kota;2;8;47;T
+140;2.08.07.2.02;Penyediaan Layanan bagi Anak yang Memerlukan Perlindungan Khusus yang Memerlukan Koordinasi Tingkat Daerah Kabupaten/Kota;2;8;47;T
+141;2.08.07.2.03;Penguatan dan Pengembangan Lembaga Penyedia Layanan bagi Anak yang Memerlukan Perlindungan Khusus Tingkat Daerah Kabupaten/Kota;2;8;47;T
+142;2.09.00.01.2.0010;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;9;48;T
+143;2.09.00.01.2.0012;Administrasi Keuangan Perangkat Daerah;2;9;48;T
+144;2.09.00.01.2.0015;Administrasi Kepegawaian Perangkat Daerah;2;9;48;T
+145;2.09.00.01.2.0016;Administrasi Umum Perangkat Daerah;2;9;48;T
+146;2.09.00.01.2.0017;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;9;48;T
+147;2.09.00.01.2.0018;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;9;48;T
+148;2.09.00.01.2.0019;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;9;48;T
+149;2.09.00.02.2.005510;Penyediaan Infrastruktur dan Seluruh Pendukung Kemandirian Pangan sesuai Kewenangan Daerah Kabupaten/Kota;2;9;49;T
+150;2.09.00.03.2.005511;Penyediaan Dan Penyaluran Pangan Pokok Atau Pangan Lainnya Sesuai Dengan Kebutuhan Daerah Kabupaten/Kota Dalam Rangka Stabilisasi Pasokan Dan Harga Pangan;2;9;49;T
+151;2.09.00.03.2.005512;Pengelolaan dan Keseimbangan Cadangan Pangan Kabupaten/Kota;2;9;50;T
+152;2.09.00.03.2.005514;Pelaksanaan Pencapaian Target Konsumsi Pangan Perkapita/Tahun sesuai dengan Angka Kecukupan Gizi;2;9;50;T
+153;2.09.00.04.2.006612;Penanganan Kerawanan Pangan Kewenangan Kabupaten/Kota;2;9;51;T
+154;2.09.00.04.2.006613;Penyusunan Peta Kerentanan dan Ketahanan Pangan Kecamatan;2;9;51;T
+155;2.09.00.05.2.007711;Pelaksanaan Pengawasan Keamanan Pangan Segar Daerah Kabupaten/Kota;2;9;52;T
+156;2.10.08.2.02;Inventarisasi dan Pemanfaatan Tanah Kosong;2;10;53;T
+157;2.10.09.2.01;Penerbitan Izin Membuka Tanah;2;10;54;T
+158;2.11.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;11;55;T
+159;2.11.01.2.02;Administrasi Keuangan Perangkat Daerah;2;11;55;T
+160;2.11.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;11;55;T
+161;2.11.01.2.06;Administrasi Umum Perangkat Daerah;2;11;55;T
+162;2.11.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;11;55;T
+163;2.11.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;11;55;T
+164;2.11.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;11;55;T
+165;2.11.02.2.01;Rencana Perlindungan dan Pengelolaan Lingkungan Hidup (RPPLH) Kabupaten/Kota;2;11;56;T
+166;2.11.02.2.02;Penyelenggaraan Kajian Lingkungan Hidup Strategis (KLHS) Kabupaten/Kota;2;11;56;T
+167;2.11.03.2.01;Pencegahan Pencemaran dan/atau Kerusakan Lingkungan Hidup Kabupaten/Kota;2;11;57;T
+168;2.11.04.2.01;Pengelolaan Keanekaragaman Hayati Kabupaten/Kota;2;11;58;T
+169;2.11.06.2.01;Pembinaan dan Pengawasan Terhadap Usaha dan/atau Kegiatan yang Izin Lingkungan dan Izin PPLH diterbitkan oleh Pemerintah Daerah Kabupaten/Kota;2;11;59;T
+170;2.11.08.2.01;Penyelenggaraan Pendidikan, Pelatihan, dan Penyuluhan Lingkungan Hidup untuk Lembaga Kemasyarakatan Tingkat Daerah Kabupaten/Kota;2;11;60;T
+171;2.11.11.2.01;Pengelolaan Sampah;2;11;61;T
+172;2.12.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;12;62;T
+173;2.12.01.2.02;Administrasi Keuangan Perangkat Daerah;2;12;62;T
+174;2.12.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;12;62;T
+175;2.12.01.2.06;Administrasi Umum Perangkat Daerah;2;12;62;T
+176;2.12.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;12;62;T
+177;2.12.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;12;62;T
+178;2.12.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;12;62;T
+179;2.12.02.2.01;Pelayanan Pendaftaran Penduduk;2;12;63;T
+180;2.12.02.2.03;Penyelenggaraan Pendaftaran Penduduk;2;12;63;T
+181;2.12.02.2.04;Pembinaan dan Pengawasan Penyelenggaraan Pendaftaran Penduduk;2;12;63;T
+182;2.12.03.2.01;Pelayanan Pencatatan Sipil;2;12;64;T
+183;2.12.03.2.02;Penyelenggaraan Pencatatan Sipil;2;12;64;T
+184;2.12.04.2.01;Pengumpulan Data Kependudukan dan Pemanfaatan dan Penyajian Database Kependudukan;2;12;65;T
+185;2.12.04.2.03;Penyelenggaraan Pengelolaan Informasi Administrasi Kependudukan;2;12;65;T
+186;2.12.05.2.01;Penyusunan Profil Kependudukan;2;12;66;T
+187;2.13.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;13;67;T
+188;2.13.01.2.02;Administrasi Keuangan Perangkat Daerah;2;13;67;T
+189;2.13.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;13;67;T
+190;2.13.01.2.06;Administrasi Umum Perangkat Daerah;2;13;67;T
+191;2.13.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;13;67;T
+192;2.13.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;13;67;T
+193;2.13.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;13;67;T
+194;2.13.02.2.01;Penyelenggaraan Penataan Desa;2;13;68;T
+195;2.13.03.2.01;Fasilitasi Kerja Sama antar Desa;2;13;69;T
+196;2.13.04.2.01;Pembinaan dan Pengawasan Penyelenggaraan Administrasi Pemerintahan Desa;2;13;70;T
+197;2.13.05.2.01;Pemberdayaan Lembaga Kemasyarakatan yang Bergerak di Bidang Pemberdayaan Desa dan Lembaga Adat Tingkat Daerah Kabupaten/Kota serta Pemberdayaan Masyarakat Hukum Adat yang Masyarakat Pelakunya Hukum Adat yang Sama dalam Daerah Kabupaten/Kota;2;13;71;T
+198;2.14.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;14;72;T
+199;2.14.01.2.02;Administrasi Keuangan Perangkat Daerah;2;14;72;T
+200;2.14.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;14;72;T
+201;2.14.01.2.06;Administrasi Umum Perangkat Daerah;2;14;72;T
+202;2.14.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;14;72;T
+203;2.14.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;14;72;T
+204;2.14.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;14;72;T
+205;2.14.02.2.01;Pemaduan dan Sinkronisasi Kebijakan Pemerintah Daerah Provinsi dengan Pemerintah Daerah Kabupaten/Kota dalam rangka Pengendalian Kuantitas Penduduk;2;14;73;T
+206;2.14.02.2.02;Pemetaan Perkiraan Pengendalian Penduduk Cakupan Daerah Kabupaten/Kota;2;14;73;T
+207;2.14.03.2.01;Pelaksanaan Advokasi, Komunikasi, Informasi dan Edukasi (KIE) Pengendalian Penduduk dan KB sesuai Kearifan Budaya Lokal;2;14;74;T
+208;2.14.03.2.02;Pendayagunaan Tenaga Penyuluh KB/Petugas Lapangan KB (PKB/PLKB);2;14;74;T
+209;2.14.03.2.03;Pengendalian dan Pendistribusian Kebutuhan Alat dan Obat Kontrasepsi serta Pelaksanaan Pelayanan KB di Daerah Kabupaten/Kota;2;14;74;T
+210;2.14.03.2.04;Pemberdayaan dan Peningkatan Peran Serta Organisasi Kemasyarakatan Tingkat Daerah Kabupaten/Kota dalam Pelaksanaan Pelayanan dan Pembinaan Kesertaan Ber-KB;2;14;74;T
+211;2.14.04.2.01;Pelaksanaan Pembangunan Keluarga melalui Pembinaan Ketahanan dan Kesejahteraan Keluarga;2;14;75;T
+212;2.14.04.2.02;Pelaksanaan dan Peningkatan Peran Serta Organisasi Kemasyarakatan Tingkat Daerah Kabupaten/ Kota dalam Pembangunan Keluarga Melalui Pembinaan Ketahanan dan Kesejahteraan Keluarga;2;14;75;T
+213;2.15.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;15;76;T
+214;2.15.01.2.02;Administrasi Keuangan Perangkat Daerah;2;15;76;T
+215;2.15.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;15;76;T
+216;2.15.01.2.06;Administrasi Umum Perangkat Daerah;2;15;76;T
+217;2.15.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;15;76;T
+218;2.15.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;15;76;T
+219;2.15.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;15;76;T
+220;2.15.02.2.01;Penetapan Rencana Induk Jaringan LLAJ Kabupaten/Kota;2;15;77;T
+221;2.15.02.2.02;Penyediaan Perlengkapan Jalan di Jalan Kabupaten/Kota;2;15;77;T
+222;2.15.02.2.03;Pengelolaan Terminal Penumpang Tipe C;2;15;77;T
+223;2.15.02.2.04;Penerbitan Izin Penyelenggaraan dan Pembangunan Fasilitas Parkir;2;15;77;T
+224;2.15.02.2.05;Pengujian Berkala Kendaraan Bermotor;2;15;77;T
+225;2.15.02.2.06;Pelaksanaan Manajemen dan Rekayasa Lalu Lintas untuk Jaringan Jalan Kabupaten/Kota;2;15;77;T
+226;2.15.02.2.07;Persetujuan Hasil Analisis Dampak Lalu Lintas (Andalalin) untuk Jalan Kabupaten/Kota;2;15;77;T
+227;2.15.02.2.08;Audit dan Inspeksi Keselamatan LLAJ di Jalan;2;15;77;T
+228;2.15.02.2.09;Penyediaan Angkutan Umum untuk Jasa Angkutan Orang dan/atau Barang Antar Kota dalam 1 (Satu) Daerah Kabupaten/Kota;2;15;77;T
+229;2.15.02.2.11;Penetapan Rencana Umum Jaringan Trayek Perkotaan dalam 1 (Satu) Daerah Kabupaten/Kota;2;15;77;T
+230;2.16.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;16;78;T
+231;2.16.01.2.02;Administrasi Keuangan Perangkat Daerah;2;16;78;T
+232;2.16.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;16;78;T
+233;2.16.01.2.06;Administrasi Umum Perangkat Daerah;2;16;78;T
+234;2.16.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;16;78;T
+235;2.16.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;16;78;T
+236;2.16.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;16;78;T
+237;2.16.02.2.01;Pengelolaan Informasi dan Komunikasi Publik Pemerintah Daerah Kabupaten/Kota;2;16;79;T
+238;2.16.03.2.01;Pengelolaan Nama Domain yang telah Ditetapkan oleh Pemerintah Pusat dan Sub Domain di Lingkup Pemerintah Daerah Kabupaten/Kota;2;16;80;T
+239;2.16.03.2.02;Pengelolaan e-government Di Lingkup Pemerintah Daerah Kabupaten/Kota;2;16;80;T
+240;2.17.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;17;81;T
+241;2.17.01.2.02;Administrasi Keuangan Perangkat Daerah;2;17;81;T
+242;2.17.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;17;81;T
+243;2.17.01.2.06;Administrasi Umum Perangkat Daerah;2;17;81;T
+244;2.17.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;17;81;T
+245;2.17.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;17;81;T
+246;2.17.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;17;81;T
+247;2.17.03.2.01;Pemeriksaan dan Pengawasan Koperasi, Koperasi Simpan Pinjam/Unit Simpan Pinjam Koperasi yang Wilayah Keanggotaannya dalam Daerah Kabupaten/ Kota;2;17;82;T
+248;2.17.04.2.01;Penilaian Kesehatan Koperasi Simpan Pinjam/Unit Simpan Pinjam Koperasi yang Wilayah Keanggotaanya dalam 1 (satu) Daerah Kabupaten/Kota;2;17;83;T
+249;2.17.05.2.01;Pendidikan dan Latihan Perkoperasian Bagi Koperasi yang Wilayah Keanggotaan dalam Daerah Kabupaten/Kota;2;17;84;T
+250;2.17.06.2.01;Pemberdayaan dan Perlindungan Koperasi yang Keanggotaannya dalam Daerah Kabupaten/Kota;2;17;85;T
+251;2.17.07.2.01;Pemberdayaan Usaha Mikro yang Dilakukan Melalui Pendataan, Kemitraan, Kemudahan Perizinan, Penguatan Kelembagaan dan Koordinasi dengan Para Pemangku Kepentingan;2;17;86;T
+252;2.17.08.2.01;Pengembangan Usaha Mikro dengan Orientasi Peningkatan Skala Usaha Menjadi Usaha Kecil;2;17;87;T
+253;2.18.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;18;88;T
+254;2.18.01.2.02;Administrasi Keuangan Perangkat Daerah;2;18;88;T
+255;2.18.01.2.06;Administrasi Umum Perangkat Daerah;2;18;88;T
+256;2.18.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;18;88;T
+257;2.18.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;18;88;T
+258;2.18.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;18;88;T
+259;2.18.02.2.01;Penetapan Pemberian Fasilitas/Insentif Dibidang Penanaman Modal yang Menjadi Kewenangan Daerah Kabupaten/Kota;2;18;89;T
+260;2.18.02.2.02;Pembuatan Peta Potensi Investasi Kabupaten/Kota;2;18;89;T
+261;2.18.03.2.01;Penyelenggaraan Promosi Penanaman Modal yang menjadi Kewenangan Daerah Kabupaten/Kota;2;18;90;T
+262;2.18.04.2.01;Pelayanan Perizinan dan Non Perizinan secara Terpadu Satu Pintu dibidang Penanaman Modal yang menjadi Kewenangan Daerah Kabupaten/ Kota;2;18;91;T
+263;2.18.05.2.01;Pengendalian Pelaksanaan Penanaman Modal yang menjadi Kewenangan Daerah Kabupaten/Kota;2;18;92;T
+264;2.18.06.2.01;Pengelolaan Data dan Informasi Perizinan dan Non Perizinan yang Terintegrasi pada Tingkat Daerah Kabupaten/Kota;2;18;93;T
+265;2.19.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;19;94;T
+266;2.19.01.2.02;Administrasi Keuangan Perangkat Daerah;2;19;94;T
+267;2.19.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;19;94;T
+268;2.19.01.2.06;Administrasi Umum Perangkat Daerah;2;19;94;T
+269;2.19.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;19;94;T
+270;2.19.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;19;94;T
+271;2.19.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;19;94;T
+272;2.19.02.2.01;Penyadaran, Pemberdayaan, dan Pengembangan Pemuda dan Kepemudaan Terhadap Pemuda Pelopor Kabupaten/Kota, Wirausaha Muda Pemula, dan Pemuda Kader Kabupaten/Kota;2;19;95;T
+273;2.19.03.2.01;Pembinaan dan Pengembangan Olahraga Pendidikan pada Jenjang Pendidikan yang menjadi Kewenangan Daerah Kabupaten/Kota;2;19;96;T
+274;2.19.03.2.02;Penyelenggaraan Kejuaraan Olahraga Tingkat Daerah Kabupaten/Kota;2;19;96;T
+275;2.19.03.2.03;Pembinaan dan Pengembangan Olahraga Prestasi Tingkat Daerah Provinsi;2;19;96;T
+276;2.19.03.2.04;Pembinaan dan Pengembangan Organisasi Olahraga;2;19;96;T
+277;2.19.03.2.05;Pembinaan dan Pengembangan Olahraga Rekreasi;2;19;96;T
+278;2.19.04.2.01;Pembinaan dan Pengembangan Organisasi Kepramukaan;2;19;97;T
+279;2.20.02.2.01;Penyelenggaraan Statistik Sektoral di Lingkup Daerah Kabupaten/Kota;2;20;98;T
+280;2.21.02.2.01;Penyelenggaraan Persandian untuk Pengamanan Informasi Pemerintah Daerah Kabupaten/Kota;2;21;99;T
+281;2.21.02.2.02;Penetapan Pola Hubungan Komunikasi Sandi Antar Perangkat Daerah Kabupaten/Kota;2;21;99;T
+282;2.22.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;22;100;T
+283;2.22.01.2.02;Administrasi Keuangan Perangkat Daerah;2;22;100;T
+284;2.22.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;22;100;T
+285;2.22.01.2.06;Administrasi Umum Perangkat Daerah;2;22;100;T
+286;2.22.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;22;100;T
+287;2.22.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;22;100;T
+288;2.22.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;22;100;T
+289;2.22.02.2.01;Pengelolaan Kebudayaan yang Masyarakat Pelakunya dalam Daerah Kabupaten/Kota;2;22;101;T
+290;2.22.02.2.02;Pelestarian Kesenian Tradisional yang Masyarakat Pelakunya dalam Daerah Kabupaten/Kota;2;22;101;T
+291;2.22.02.2.03;Pembinaan Lembaga Adat yang Penganutnya dalam Daerah Kabupaten/Kota;2;22;101;T
+292;2.22.04.2.01;Pembinaan Sejarah Lokal dalam 1 (satu) Daerah Kabupaten/Kota;2;22;102;T
+293;2.22.05.2.01;Penetapan Cagar Budaya Peringkat Kabupaten/Kota;2;22;103;T
+294;2.22.05.2.02;Pengelolaan Cagar Budaya Peringkat Kabupaten/Kota;2;22;103;T
+295;2.22.06.2.01;Pengelolaan Museum Kabupaten/Kota;2;22;104;T
+296;2.23.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;2;23;105;T
+297;2.23.01.2.02;Administrasi Keuangan Perangkat Daerah;2;23;105;T
+298;2.23.01.2.05;Administrasi Kepegawaian Perangkat Daerah;2;23;105;T
+299;2.23.01.2.06;Administrasi Umum Perangkat Daerah;2;23;105;T
+300;2.23.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;2;23;105;T
+301;2.23.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;2;23;105;T
+302;2.23.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;2;23;105;T
+303;2.23.02.2.01;Pengelolaan Perpustakaan Tingkat Daerah Kabupaten/Kota;2;23;106;T
+304;2.23.02.2.02;Pembudayaan Gemar Membaca Tingkat Daerah Kabupaten/Kota;2;23;106;T
+305;2.23.03.2.01;Pelestarian Naskah Kuno Milik Daerah Kabupaten/Kota;2;23;107;T
+306;2.24.02.2.01;Pengelolaan Arsip Dinamis Daerah Kabupaten/Kota;2;24;108;T
+307;2.24.02.2.02;Pengelolaan Arsip Statis Daerah Kabupaten/Kota;2;24;108;T
+308;2.24.02.2.03;Pengelolaan Simpul Jaringan Informasi Kearsipan Nasional Tingkat Kabupaten/Kota;2;24;108;T
+309;2.24.03.2.01;Pemusnahan Arsip Dilingkungan Pemerintah Daerah Kabupaten/Kota yang Memiliki Retensi di Bawah 10 (sepuluh) Tahun;2;24;109;T
+310;3.25.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;3;25;110;T
+311;3.25.01.2.02;Administrasi Keuangan Perangkat Daerah;3;25;110;T
+312;3.25.01.2.03;Administrasi Barang Milik Daerah pada Perangkat Daerah;3;25;110;T
+313;3.25.01.2.05;Administrasi Kepegawaian Perangkat Daerah;3;25;110;T
+314;3.25.01.2.06;Administrasi Umum Perangkat Daerah;3;25;110;T
+315;3.25.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;3;25;110;T
+316;3.25.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;3;25;110;T
+317;3.25.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;3;25;110;T
+318;3.25.03.2.01;Pengelolaan Penangkapan Ikan di Wilayah Sungai, Danau, Waduk, Rawa, dan Genangan Air Lainnya yang dapat Diusahakan dalam 1 (satu) Daerah Kabupaten/ Kota;3;25;111;T
+319;3.25.03.2.02;Pemberdayaan Nelayan Kecil dalam Daerah Kabupaten/Kota;3;25;111;T
+320;3.25.03.2.03;Pengelolaan dan Penyelenggaraan Tempat Pelelangan Ikan (TPI);3;25;111;T
+321;3.25.04.2.02;Pemberdayaan Pembudi Daya Ikan Kecil;3;25;112;T
+322;3.25.04.2.04;Pengelolaan Pembudidayaan Ikan;3;25;112;T
+323;3.25.05.2.01;Pengawasan Sumber Daya Perikanan di Wilayah Sungai, Danau, Waduk, Rawa, dan Genangan Air Lainnya yang Dapat Diusahakan Dalam Kabupaten/Kota;3;25;113;T
+324;3.25.06.2.01;Penerbitan Tanda Daftar Usaha Pengolahan Hasil Perikanan Bagi Usaha Skala Mikro dan Kecil;3;25;114;T
+325;3.25.06.2.02;Pembinaan Mutu dan Keamanan Hasil Perikanan Bagi Usaha Pengolahan dan Pemasaran Skala Mikro dan Kecil;3;25;114;T
+326;3.25.06.2.03;Penyediaan dan Penyaluran Bahan Baku Industri Pengolahan Ikan dalam 1 (satu) Daerah Kabupaten/ Kota;3;25;114;T
+327;3.26.02.2.03;Pengelolaan Destinasi Pariwisata Kabupaten/Kota;3;26;115;T
+328;3.26.03.2.01;Pemasaran Pariwisata Dalam dan Luar Negeri Daya Tarik, Destinasi dan Kawasan Strategis Pariwisata Kabupaten/Kota;3;26;116;T
+329;3.26.05.2.01;Pelaksanaan Peningkatan Kapasitas Sumber Daya Manusia Pariwisata dan Ekonomi Kreatif Tingkat Dasar;3;26;117;T
+330;3.27.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;3;27;118;T
+331;3.27.01.2.02;Administrasi Keuangan Perangkat Daerah;3;27;118;T
+332;3.27.01.2.05;Administrasi Kepegawaian Perangkat Daerah;3;27;118;T
+333;3.27.01.2.06;Administrasi Umum Perangkat Daerah;3;27;118;T
+334;3.27.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;3;27;118;T
+335;3.27.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;3;27;118;T
+336;3.27.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;3;27;118;T
+337;3.27.02.2.01;Pengawasan Penggunaan Sarana Pertanian;3;27;119;T
+338;3.27.02.2.02;Pengelolaan Sumber Daya Genetik (SDG) Hewan, Tumbuhan, dan Mikro Organisme Kewenangan Kabupaten/Kota;3;27;119;T
+339;3.27.02.2.03;Peningkatan Mutu dan Peredaran Benih/Bibit Ternak dan Tanaman Pakan Ternak serta Pakan dalam Daerah Kabupaten/Kota;3;27;119;T
+340;3.27.02.2.05;Pengendalian dan Pengawasan Penyediaan dan Peredaran Benih/Bibit Ternak, dan Hijauan Pakan Ternak dalam Daerah Kabupaten/Kota;3;27;119;T
+341;3.27.03.2.01;Pengembangan Prasarana Pertanian;3;27;120;T
+342;3.27.03.2.02;Pembangunan Prasarana Pertanian;3;27;120;T
+343;3.27.04.2.01;Penjaminan Kesehatan Hewan, Penutupan dan Pembukaan Daerah Wabah Penyakit Hewan Menular Dalam Daerah Kabupaten/Kota;3;27;121;T
+344;3.27.04.2.02;Pengawasan Pemasukan dan Pengeluaran Hewan dan Produk Hewan Daerah Kabupaten/Kota;3;27;121;T
+345;3.27.04.2.03;Pengelolaan Pelayanan Jasa Laboratorium dan Jasa Medik Veteriner dalam Daerah Kabupaten/Kota;3;27;121;T
+346;3.27.05.2.01;Pengendalian dan Penanggulangan Bencana Pertanian Kabupaten/Kota;3;27;122;T
+347;3.27.07.2.01;Pelaksanaan Penyuluhan Pertanian;3;27;123;T
+348;3.30.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;3;30;124;T
+349;3.30.01.2.02;Administrasi Keuangan Perangkat Daerah;3;30;124;T
+350;3.30.01.2.05;Administrasi Kepegawaian Perangkat Daerah;3;30;124;T
+351;3.30.01.2.06;Administrasi Umum Perangkat Daerah;3;30;124;T
+352;3.30.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;3;30;124;T
+353;3.30.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;3;30;124;T
+354;3.30.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;3;30;124;T
+355;3.30.02.2.02;Penerbitan Tanda Daftar Gudang;3;30;125;T
+356;3.30.02.2.03;Penerbitan Surat Tanda Pendaftaran Waralaba (STPW) untuk Penerima Waralaba dari Waralaba Dalam Negeri;3;30;125;T
+357;3.30.02.2.04;Penerbitan Surat Tanda Pendaftaran Waralaba (STPW) untuk Penerima Waralaba Lanjutan dari Waralaba Luar Negeri;3;30;125;T
+358;3.30.02.2.05;Penerbitan Surat Izin Usaha Perdagangan Minuman Beralkohol Golongan B dan C untuk Pengecer dan Penjual Langsung Minum di Tempat;3;30;125;T
+359;3.30.02.2.06;Pengendalian Fasilitas Penyimpanan Bahan Berbahaya dan Pengawasan Distribusi, Pengemasan dan Pelabelan Bahan Berbahaya di Tingkat Daerah Kabupaten/ Kota;3;30;125;T
+360;3.30.03.2.01;Pembangunan dan Pengelolaan Sarana Distribusi Perdagangan;3;30;126;T
+361;3.30.03.2.02;Pembinaan Terhadap Pengelola Sarana Distribusi Perdagangan Masyarakat di Wilayah Kerjanya;3;30;126;T
+362;3.30.04.2.01;Menjamin Ketersediaan Barang Kebutuhan Pokok dan Barang Penting di Tingkat Daerah Kabupaten/ Kota;3;30;127;T
+363;3.30.04.2.02;Pengendalian Harga, dan Stok Barang Kebutuhan Pokok dan Barang Penting di Tingkat Pasar Kabupaten/Kota;3;30;127;T
+364;3.30.04.2.03;Pengawasan Pupuk dan Pestisida Bersubsidi di Tingkat Daerah Kabupaten/Kota;3;30;127;T
+365;3.30.05.2.01;Penyelenggaraan Promosi Dagang melalui Pameran Dagang dan Misi Dagang bagi Produk Ekspor Unggulan yang terdapat pada 1 (satu) Daerah Kabupaten/Kota;3;30;128;T
+366;3.30.06.2.01;Pelaksanaan Metrologi Legal, Berupa Tera, Tera Ulang, dan Pengawasan;3;30;129;T
+367;3.30.07.2.01;Pelaksanaan Promosi, Pemasaran dan Peningkatan Penggunaan Produk Dalam Negeri;3;30;130;T
+368;3.31.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;3;31;131;T
+369;3.31.01.2.02;Administrasi Keuangan Perangkat Daerah;3;31;131;T
+370;3.31.01.2.06;Administrasi Umum Perangkat Daerah;3;31;131;T
+371;3.31.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;3;31;131;T
+372;3.31.02.2.01;Penyusunan dan Evaluasi Rencana Pembangunan Industri Kabupaten/Kota;3;31;132;T
+373;3.31.03.2.01;Penerbitan Izin Usaha Industri (IUI), Izin Perluasan Usaha Industri (IPUI), Izin Usaha Kawasan Industri (IUKI) dan Izin Perluasan Kawasan Industri (IPKI) Kewenangan Kabupaten/Kota;3;31;133;T
+374;3.31.04.2.01;Penyediaan Informasi Industri untuk Informasi Industri untuk IUI, IPUI, IUKI dan IPKI Kewenangan Kabupaten/Kota;3;31;134;T
+375;4.01.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;4;33;135;T
+376;4.01.01.2.02;Administrasi Keuangan Perangkat Daerah;4;33;135;T
+377;4.01.01.2.05;Administrasi Kepegawaian Perangkat Daerah;4;33;135;T
+378;4.01.01.2.06;Administrasi Umum Perangkat Daerah;4;33;135;T
+379;4.01.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;4;33;135;T
+380;4.01.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;4;33;135;T
+381;4.01.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;4;33;135;T
+382;4.01.01.2.11;Administrasi Keuangan dan Operasional Kepala Daerah dan Wakil Kepala Daerah;4;33;135;T
+383;4.01.01.2.12;Fasilitasi Kerumahtanggaan Sekretariat Daerah;4;33;135;T
+384;4.01.01.2.13;Penataan Organisasi;4;33;135;T
+385;4.01.01.2.14;Pelaksanaan Protokol dan Komunikasi Pimpinan;4;33;135;T
+386;4.01.02.2.01;Administrasi Tata Pemerintahan;4;33;136;T
+387;4.01.02.2.02;Pelaksanaan Kebijakan Kesejahteraan Rakyat;4;33;136;T
+388;4.01.02.2.03;Fasilitasi dan Koordinasi Hukum;4;33;136;T
+389;4.01.02.2.04;Fasilitasi Kerjasama Daerah;4;33;136;T
+390;4.01.03.2.01;Pelaksanaan Kebijakan Perekonomian;4;33;136;T
+391;4.01.03.2.02;Pelaksanaan Administrasi Pembangunan;4;33;137;T
+392;4.01.03.2.03;Pengelolaan Pengadaan Barang dan Jasa;4;33;137;T
+393;4.01.03.2.04;Pemantauan Kebijakan Sumber Daya Alam;4;33;137;T
+394;4.02.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;4;34;138;T
+395;4.02.01.2.02;Administrasi Keuangan Perangkat Daerah;4;34;138;T
+396;4.02.01.2.03;Administrasi Barang Milik Daerah pada Perangkat Daerah;4;34;138;T
+397;4.02.01.2.05;Administrasi Kepegawaian Perangkat Daerah;4;34;138;T
+398;4.02.01.2.06;Administrasi Umum Perangkat Daerah;4;34;138;T
+399;4.02.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;4;34;138;T
+400;4.02.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;4;34;138;T
+401;4.02.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;4;34;138;T
+402;4.02.01.2.15;Layanan Keuangan dan Kesejahteraan DPRD;4;34;138;T
+403;4.02.01.2.16;Layanan Administrasi DPRD;4;34;138;T
+404;4.02.02.2.01;Pembentukan Peraturan Daerah dan Peraturan DPRD;4;34;139;T
+405;4.02.02.2.02;Pembahasan Kebijakan Anggaran;4;34;139;T
+406;4.02.02.2.03;Pengawasan Penyelenggaraan Pemerintahan;4;34;139;T
+407;4.02.02.2.04;Peningkatan Kapasitas DPRD;4;34;139;T
+408;4.02.02.2.05;Penyerapan dan Penghimpunan Aspirasi Masyarakat;4;34;139;T
+409;4.02.02.2.06;Pelaksanaan dan Pengawasan Kode Etik DPRD;4;34;139;T
+410;4.02.02.2.07;Pembahasan Kerja Sama Daerah;4;34;139;T
+411;4.02.02.2.08;Fasilitasi Tugas DPRD;4;34;139;T
+412;5.01.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;5;35;140;T
+413;5.01.01.2.02;Administrasi Keuangan Perangkat Daerah;5;35;140;T
+414;5.01.01.2.05;Administrasi Kepegawaian Perangkat Daerah;5;35;140;T
+415;5.01.01.2.06;Administrasi Umum Perangkat Daerah;5;35;140;T
+416;5.01.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;5;35;140;T
+417;5.01.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;5;35;140;T
+418;5.01.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;5;35;140;T
+419;5.01.02.2.01;Penyusunan Perencanaan dan Pendanaan;5;35;141;T
+420;5.01.02.2.02;Analisis Data dan Informasi Pemerintahan Daerah Bidang Perencanaan Pembangunan Daerah;5;35;141;T
+421;5.01.02.2.03;Pengendalian, Evaluasi dan Pelaporan Bidang Perencanaan Pembangunan Daerah;5;35;141;T
+422;5.01.02.2.04;Implementasi Sistem Informasi Pemerintahan Daerah di Bidang Pembangunan Daerah;5;35;141;T
+423;5.01.03.2.01;Koordinasi Perencanaan Bidang Pemerintahan dan Pembangunan Manusia;5;35;142;T
+424;5.01.03.2.02;Koordinasi Perencanaan Bidang Perekonomian dan SDA (Sumber Daya Alam);5;35;142;T
+425;5.01.03.2.03;Koordinasi Perencanaan Bidang Infrastruktur dan Kewilayahan;5;35;142;T
+426;5.02.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;5;36;143;T
+427;5.02.01.2.02;Administrasi Keuangan Perangkat Daerah;5;36;143;T
+428;5.02.01.2.05;Administrasi Kepegawaian Perangkat Daerah;5;36;143;T
+429;5.02.01.2.06;Administrasi Umum Perangkat Daerah;5;36;143;T
+430;5.02.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;5;36;143;T
+431;5.02.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;5;36;143;T
+432;5.02.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;5;36;143;T
+433;5.02.02.2.01;Koordinasi dan Penyusunan Rencana Anggaran Daerah;5;36;144;T
+434;5.02.02.2.02;Koordinasi dan Pengelolaan Perbendaharaan Daerah;5;36;144;T
+435;5.02.02.2.03;Koordinasi dan Pelaksanaan Akuntansi dan Pelaporan Keuangan Daerah;5;36;144;T
+436;5.02.02.2.04;Penunjang Urusan Kewenangan Pengelolaan Keuangan Daerah;5;36;144;T
+437;5.02.03.2.01;Pengelolaan Barang Milik Daerah;5;36;145;T
+438;5.02.04.2.01;Kegiatan Pengelolaan pendapatan Daerah;5;36;146;T
+439;5.03.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;5;37;147;T
+440;5.03.01.2.02;Administrasi Keuangan Perangkat Daerah;5;37;147;T
+441;5.03.01.2.05;Administrasi Kepegawaian Perangkat Daerah;5;37;147;T
+442;5.03.01.2.06;Administrasi Umum Perangkat Daerah;5;37;147;T
+443;5.03.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;5;37;147;T
+444;5.03.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;5;37;147;T
+445;5.03.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;5;37;147;T
+446;5.03.02.2.01;Pengadaan, Pemberhentian dan Informasi Kepegawaian ASN;5;37;148;T
+447;5.03.02.2.02;Mutasi dan Promosi ASN;5;37;148;T
+448;5.03.02.2.03;Pengembangan Kompetensi ASN;5;37;148;T
+449;5.03.02.2.04;Penilaian dan Evaluasi Kinerja Aparatur;5;37;148;T
+450;5.04.02.2.01;Pengembangan Kompetensi Teknis;5;38;149;T
+451;5.04.02.2.02;Sertifikasi, Kelembagaan, Pengembangan Kompetensi Manajerial dan Fungsional;5;38;149;T
+452;5.05.02.2.01;Penelitian dan Pengembangan Bidang Penyelenggaraan Pemerintahan dan Pengkajian Peraturan;5;39;150;T
+453;5.05.02.2.02;Penelitian dan Pengembangan Bidang Sosial dan Kependudukan;5;39;150;T
+454;5.05.02.2.03;Penelitian dan Pengembangan Bidang Ekonomi dan Pembangunan;5;39;150;T
+455;5.05.02.2.04;Pengembangan Inovasi dan Teknologi;5;39;150;T
+456;6.01.01.2.001;Perencanaan, Penganggaran, Dan Evaluasi Kinerja Perangkat Daerah;6;42;151;T
+457;6.01.01.2.002;Administrasi Keuangan Perangkat Daerah;6;42;151;T
+458;6.01.01.2.005;Administrasi Kepegawaian Perangkat Daerah;6;42;151;T
+459;6.01.01.2.00505;Administrasi Kepegawaian Perangkat Daerah;6;42;155;T
+460;6.01.01.2.006;Administrasi Umum Perangkat Daerah;6;42;151;T
+461;6.01.01.2.007;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;6;42;151;T
+462;6.01.01.2.008;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;6;42;151;T
+463;6.01.01.2.009;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;6;42;151;T
+464;6.01.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;6;42;154;T
+465;6.01.01.2.02;Administrasi Keuangan Perangkat Daerah;6;42;154;T
+466;6.01.01.2.05;Administrasi Kepegawaian Perangkat Daerah;6;42;154;T
+467;6.01.01.2.06;Administrasi Umum Perangkat Daerah;6;42;154;T
+468;6.01.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;6;42;154;T
+469;6.01.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;6;42;154;T
+470;6.01.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;6;42;154;T
+471;6.01.02.2.001;Penyelenggaraan Pengawasan Internal;6;42;152;T
+472;6.01.02.2.002;Penyelenggaraan Pengawasan dengan Tujuan Tertentu;6;42;152;T
+473;6.01.02.2.01;Penyelenggaraan Pengawasan Internal;6;42;156;T
+474;6.01.02.2.02;Penyelenggaraan Pengawasan dengan Tujuan Tertentu;6;42;156;T
+475;6.01.03.2.001;Perumusan Kebijakan Teknis di Bidang Pengawasan dan Fasilitasi Pengawasan;6;42;153;T
+476;6.01.03.2.00101;Perumusan Kebijakan Teknis di Bidang Pengawasan dan Fasilitasi Pengawasan;6;42;158;T
+477;6.01.03.2.002;Pendampingan dan Asistensi;6;42;153;T
+478;6.01.03.2.01;Perumusan Kebijakan Teknis di Bidang Pengawasan dan Fasilitasi Pengawasan;6;42;157;T
+479;6.01.03.2.02;Pendampingan dan Asistensi;6;42;157;T
+480;7.01.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;7;43;159;T
+481;7.01.01.2.02;Administrasi Keuangan Perangkat Daerah;7;43;159;T
+482;7.01.01.2.05;Administrasi Kepegawaian Perangkat Daerah;7;43;159;T
+483;7.01.01.2.06;Administrasi Umum Perangkat Daerah;7;43;159;T
+484;7.01.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;7;43;159;T
+485;7.01.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;7;43;159;T
+486;7.01.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;7;43;159;T
+487;7.01.01.2.13;Penataan Organisasi;7;43;159;T
+488;7.01.02.2.01;Koordinasi Penyelenggaraan Kegiatan Pemerintahan di Tingkat Kecamatan;7;43;160;T
+489;7.01.02.2.02;Penyelenggaraan Urusan Pemerintahan yang tidak Dilaksanakan oleh Unit Kerja Perangkat Daerah yang ada di Kecamatan;7;43;160;T
+490;7.01.02.2.04;Pelaksanaan Urusan Pemerintahan yang Dilimpahkan kepada Camat;7;43;160;T
+491;7.01.03.2.01;Koordinasi Kegiatan Pemberdayaan Desa;7;43;161;T
+492;7.01.03.2.02;Kegiatan Pemberdayaan Kelurahan;7;43;161;T
+493;7.01.04.2.01;Koordinasi Upaya Penyelenggaraan Ketenteraman dan Ketertiban Umum;7;43;162;T
+494;7.01.05.2.01;Penyelenggaraan Urusan Pemerintahan Umum Sesuai Penugasan Kepala Daerah;7;43;163;T
+495;7.01.06.2.01;Fasilitasi, Rekomendasi dan Koordinasi Pembinaan dan Pengawasan Pemerintahan Desa;7;43;164;T
+496;8.01.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;8;46;165;T
+497;8.01.01.2.02;Administrasi Keuangan Perangkat Daerah;8;46;165;T
+498;8.01.01.2.05;Administrasi Kepegawaian Perangkat Daerah;8;46;165;T
+499;8.01.01.2.06;Administrasi Umum Perangkat Daerah;8;46;165;T
+500;8.01.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;8;46;165;T
+501;8.01.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;8;46;165;T
+502;8.01.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;8;46;165;T
+503;8.01.02.2.01;Perumusan Kebijakan Teknis dan Pemantapan Pelaksanaan Bidang Ideologi Pancasila dan Karakter Kebangsaan;8;46;166;T
+504;8.01.03.2.01;Perumusan Kebijakan Teknis dan Pemantapan Pelaksanaan Bidang Pendidikan Politik, Etika Budaya Politik, Peningkatan Demokrasi, Fasilitasi Kelembagaan Pemerintahan, Perwakilan dan Partai Politik, Pemilihan Umum/Pemilihan Umum Kepala Daerah, serta Pemantauan;8;46;167;T
+505;8.01.04.2.01;Perumusan Kebijakan Teknis dan Pemantapan Pelaksanaan Bidang Pemberdayaan dan Pengawasan Organisasi Kemasyarakatan;8;46;168;T
+506;8.01.05.2.01;Perumusan Kebijakan Teknis dan Pemantapan Pelaksanaan Bidang Ketahanan Ekonomi, Sosial dan Budaya;8;46;169;T
+507;8.01.06.2.01;Perumusan Kebijakan Teknis dan Pelaksanaan Pemantapan Kewaspadaan Nasional dan Penanganan Konflik Sosial;8;46;170;T
+508;X.XX.01.2.01;Perencanaan, Penganggaran, dan Evaluasi Kinerja Perangkat Daerah;10;50;171;T
+509;X.XX.01.2.02;Administrasi Keuangan Perangkat Daerah;10;50;171;T
+510;X.XX.01.2.05;Administrasi Kepegawaian Perangkat Daerah;10;50;171;T
+511;X.XX.01.2.06;Administrasi Umum Perangkat Daerah;10;50;171;T
+512;X.XX.01.2.07;Pengadaan Barang Milik Daerah Penunjang Urusan Pemerintah Daerah;10;50;171;T
+513;X.XX.01.2.08;Penyediaan Jasa Penunjang Urusan Pemerintahan Daerah;10;50;171;T
+514;X.XX.01.2.09;Pemeliharaan Barang Milik Daerah Penunjang Urusan Pemerintahan Daerah;10;50;171;T
