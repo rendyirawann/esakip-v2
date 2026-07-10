@@ -115,7 +115,7 @@ $('#updateModal').on('show.bs.modal', function (event) {
                       <td><?= Html::encode($no++) ?></td>
                       <td style="white-space: pre-wrap;"><?= Html::decode($model->uraian_visi) ?></td>
                       <td style="white-space: pre-wrap;"><?= Html::decode($model->penjabaran_visi) ?></td>
-                      <td><?= Html::encode($model->periode->periode) ?></td>
+                      <td><?= Html::encode($model->periodeLabel()) ?></td>
                       <td>
                         <?php if ($model->visi_isaktif === 'T'): ?>
                           <span class="btn btn-success btn-sm">Aktif</span>

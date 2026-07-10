@@ -118,7 +118,7 @@ $('#updateModal').on('show.bs.modal', function (event) {
                                             <td><?= Html::encode($model->refvisi_id) ?></td>
                                             <td><?= Html::encode($model->refmisi_id) ?></td>
                                             <td><?= Html::encode($model->reftujuan_id) ?></td>
-                                            <td><?= Html::encode($model->refperiode_id) ?></td>
+                                            <td><?= Html::encode($model->periodeLabel()) ?></td>
 
                                             <td style="width: 150px;">
                                                 <button type="button" class="btn btn-primary btn-sm" title="View" data-bs-toggle="modal" data-bs-target="#myModal<?= $model->refsasaran_id ?>">

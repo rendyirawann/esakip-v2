@@ -182,6 +182,8 @@ $isPengaturanActive = in_array($currentRoute, $pengaturanRoutes);
           </ul>
         </li>
 
+<?php /* Renstra Data P disembunyikan SEMENTARA. Untuk mengaktifkan lagi: ubah `if (false)` -> `if (true)`. */ ?>
+        <?php if (false): ?>
         <li class="pc-item pc-hasmenu <?= $isRenstraDataPActive ? 'active show' : '' ?>">
           <a href="#!" class="pc-link <?= $isRenstraDataPActive ? 'active' : '' ?>">
             <span class="pc-micon">
@@ -195,6 +197,7 @@ $isPengaturanActive = in_array($currentRoute, $pengaturanRoutes);
             <li class="pc-item <?= $currentRoute == 'sakip-sasaran-p/index' ? 'active' : '' ?>"><a class="pc-link" href="<?= Url::to(['/sakip-sasaran-p/index']) ?>">Sasaran P</a></li>
           </ul>
         </li>
+        <?php endif; ?>
 
         <li class="pc-item pc-hasmenu <?= $isLkeActive ? 'active show' : '' ?>">
           <a href="#!" class="pc-link <?= $isLkeActive ? 'active' : '' ?>">

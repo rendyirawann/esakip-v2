@@ -114,7 +114,7 @@ $('#updateModal').on('show.bs.modal', function (event) {
                     <tr>
                       <td><?= Html::encode($no++) ?></td>
                       <td style="white-space: pre-wrap;"><?= Html::decode($model->uraian_misi) ?></td>
-                      <td><?= Html::encode($model->periode->periode) ?></td>
+                      <td><?= Html::encode($model->periodeLabel()) ?></td>
                       <td style="white-space: normal;"><?= Html::decode($model->visi->uraian_visi) ?></td>
                       <td>
                         <?php if ($model->misi_isaktif === 'T'): ?>

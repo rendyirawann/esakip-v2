@@ -124,7 +124,7 @@ $('#updateModal').on('show.bs.modal', function (event) {
                   'attribute' => 'refperiode_id',
                   'label' => 'Periode Tahun',
                   'value' => function ($model) {
-                    return $model->periode ? $model->periode->periode : 'Tidak ada periode';
+                    return $model->periodeLabel();
                   },
                 ],
                 [

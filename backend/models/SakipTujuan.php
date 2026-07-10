@@ -25,8 +25,6 @@ class SakipTujuan extends \yii\db\ActiveRecord
         return 'v2_sakip_tujuan';
     }
 
-    public $refperiode_id;
-
     /**
      * {@inheritdoc}
      */
@@ -57,20 +55,6 @@ class SakipTujuan extends \yii\db\ActiveRecord
         ];
     }
 
-    public function afterFind()
-    {
-        parent::afterFind();
-        if ($this->refperiode_5tahun_id) {
-            $periode = SakipPeriode::find()
-                ->where(['refperiode_5tahun_id' => $this->refperiode_5tahun_id])
-                ->orderBy(['periode_isaktif' => SORT_DESC, 'periode' => SORT_ASC])
-                ->one();
-            if ($periode) {
-                $this->refperiode_id = $periode->refperiode_id;
-            }
-        }
-    }
-
     public function beforeSave($insert)
     {
         if (!parent::beforeSave($insert)) {
@@ -88,6 +72,25 @@ class SakipTujuan extends \yii\db\ActiveRecord
     public function getPeriode5Tahun()
     {
         return $this->hasOne(SakipPeriode5tahun::class, ['refperiode_5tahun_id' => 'refperiode_5tahun_id']);
+    }
+
+    /**
+     * Relasi ke tahun spesifik yang DIPILIH user (kolom refperiode_id).
+     */
+    public function getPeriodePilihan()
+    {
+        return $this->hasOne(SakipPeriode::class, ['refperiode_id' => 'refperiode_id']);
+    }
+
+    /**
+     * Label periode untuk tampilan, mis. "2024 – 2029 (Tahun 2025)".
+     */
+    public function periodeLabel()
+    {
+        $p5 = $this->periode5Tahun;
+        $range = $p5 ? ($p5->tahun_mulai . ' – ' . $p5->tahun_selesai) : '-';
+        $thn = $this->periodePilihan ? $this->periodePilihan->periode : null;
+        return $range . ($thn ? ' (Tahun ' . $thn . ')' : '');
     }
 
     /**
