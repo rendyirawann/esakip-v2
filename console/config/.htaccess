@@ -1,0 +1,9 @@
+# Blokir SEMUA akses HTTP ke folder konfigurasi (berisi *-local.php / secret).
+# Aplikasi tetap membaca file ini lewat PHP (filesystem) sehingga tidak terganggu.
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>

@@ -157,7 +157,7 @@ $this->registerJs("
 
     <?= $form->field($model, 'refvisi_id')->dropDownList(
         ArrayHelper::map(
-            SakipVisi::find()->where(['refperiode_id' => $model->refperiode_id])->all(),
+            SakipVisi::find()->where(['refperiode_5tahun_id' => $model->refperiode_5tahun_id])->all(),
             'refvisi_id',
             function ($model) {
                 return Html::decode($model->uraian_visi) . " - " . Html::encode($model->refperiode_id); // Decode & encode data
